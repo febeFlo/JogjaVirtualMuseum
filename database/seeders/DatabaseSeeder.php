@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Map;
+use App\Models\Comment;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -18,6 +20,20 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+        ]);
+
+        User::create([
+            'name' => 'Evan',
+            'email' => 'evan@example.com',
+            'password' => 'evan1234',
+        ]);
+
+        Map::create([
+            'link' => 'https://www.youtube.com/embed/mzv01MhsR8g?si=MqIn8UEpN_f4DlMp'
+        ]);
+
+        Map::create([
+            'link' => 'https://www.youtube.com/embed/c_C8W1rOjJA?si=pv3UwH-aXKStFCDd'
         ]);
     }
 }

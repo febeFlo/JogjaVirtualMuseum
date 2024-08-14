@@ -7,9 +7,8 @@
     <title>Home Page</title>
 </head>
 <body>
-    <h1>Selamat Datang di Suara Yogyakarta</h1>
-
-    <h2>Title</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/izrk-erhDdk?si=kjkmpShT5LZijRsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <img src="{{ asset('assets/peta.jpg') }}" alt="Peta Yogyakarta" class="w-screen"/>
+    <a href="video"><img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="w-[45px] mt-[-820px] ml-[300px]"/></a>
+<!-- waktu klik icon kirim nomor lokasi -->
 </body>
 </html>
