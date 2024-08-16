@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- terima nomor lokasi yg dikirim dari home page lalu get link youtube sesuai dgn nomor lokasinya -->
-    <iframe class="size-9/12 h-screen" src="https://www.youtube.com/embed/izrk-erhDdk?si=kjkmpShT5LZijRsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="size-9/12 h-screen" src="{{$data['link']}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <!-- width="560" height="315" -->
 </body>
 </html>

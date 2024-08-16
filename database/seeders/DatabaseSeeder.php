@@ -29,11 +29,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Map::create([
-            'link' => 'https://www.youtube.com/embed/mzv01MhsR8g?si=MqIn8UEpN_f4DlMp'
+            'link' => 'https://www.youtube.com/embed/mzv01MhsR8g?si=MqIn8UEpN_f4DlMp',
+            'location' => 'assets/locationPointer.png'
         ]);
 
         Map::create([
-            'link' => 'https://www.youtube.com/embed/c_C8W1rOjJA?si=pv3UwH-aXKStFCDd'
+            'link' => 'https://www.youtube.com/embed/c_C8W1rOjJA?si=pv3UwH-aXKStFCDd',
+            'location' => 'assets/locationPointer.png'
         ]);
     }
 }
