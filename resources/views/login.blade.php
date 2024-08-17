@@ -35,6 +35,8 @@
             </div>
             <button type="submit"
                 class="text-white bg-indigo-400 hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-indigo-200 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Login</button>
+
+            <p class="absolute mt-3 text-sm">Don't have an account?<a href="{{ route('register') }}" class="text-indigo-500"> Register Here</a></p>
         </form>
     </div>
 </body>

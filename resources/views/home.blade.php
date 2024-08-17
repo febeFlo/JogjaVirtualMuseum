@@ -10,9 +10,7 @@
     <img src="{{ asset('assets/peta.jpg') }}" alt="Peta Yogyakarta" class="w-screen"/>
 
     @foreach ($data as $value)
-    <a href="getLink/{{$value['id']}}"><img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="w-[45px] mt-[-820px] ml-[300px]"/></a>
+        <a href="getLink/{{$value['id']}}"><img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="w-[45px] mt-[-820px] ml-[300px]"/></a>
     @endforeach
-<!-- waktu klik icon kirim nomor lokasi -->
-
 </body>
 </html>
