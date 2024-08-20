@@ -21,3 +21,11 @@ export default {
 
     plugins: [forms, typography],
 };
+
+module.exports = {
+
+    plugins: [
+        require('flowbite/plugin')
+    ]
+
+}

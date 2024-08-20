@@ -10,6 +10,11 @@ class Comment extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $fillable = [
+        'comment',
+        'user_id',
+        'map_id'
+    ];
 
     public function user(): BelongsTo {
         return $this->belongsTo(User::class, 'user_id', 'id');

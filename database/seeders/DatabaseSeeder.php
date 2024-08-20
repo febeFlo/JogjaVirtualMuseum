@@ -28,6 +28,12 @@ class DatabaseSeeder extends Seeder
             'password' => 'evan1234',
         ]);
 
+        User::create([
+            'name' => 'Fany',
+            'email' => 'fany@example.com',
+            'password' => 'fany1234',
+        ]);
+
         Map::create([
             'link' => 'https://www.youtube.com/embed/mzv01MhsR8g?si=MqIn8UEpN_f4DlMp',
             'location' => 'assets/locationPointer.png'

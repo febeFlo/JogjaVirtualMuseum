@@ -1,9 +1,11 @@
 <?php
 
 use App\Actions\Fortify\CreateNewUser;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\MapController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Models\Comment;
 
 Route::get('/', function () {
     return view('login');
@@ -19,6 +21,7 @@ Route::get('/video', function() {
 })->name('video');
 
 Route::get('getLink/{id}', [MapController::class, 'getLink']);
+Route::post('/addComment', [CommentController::class, 'addComment'])->name('addComment');
 
 Route::middleware([
     'auth:sanctum',
