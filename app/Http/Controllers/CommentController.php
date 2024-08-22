@@ -9,17 +9,15 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    public function addComment(Request $request)
+    public function submit(Request $request)
     {
         $request->validate([
-            'comment' => 'required|string',
-            'user_id' => 'required|integer|exists:users,id',
+            'answer1' => 'required|string',
             'map_id' => 'required|integer|exists:maps,id',
         ]);
 
         Comment::create([
-            'comment' => $request('comment'),
-            'user_id' => $request('user_id'),
+            'answer1' => $request('answer1'),
             'map_id' => $request('map_id'),
         ]);
 

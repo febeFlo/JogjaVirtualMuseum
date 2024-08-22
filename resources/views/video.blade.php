@@ -8,12 +8,8 @@
 </head>
 <body>
     <div>
-        <iframe class="size-9/12 h-screen" src="{{$data['link']}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- width="560" height="315" -->
-        <!-- w-full h-screen size-9/12 -->
-
-        <div class="absolute top-0 right-0 size-3/12 p-2">
-            <div class="scroll-smooth">
+        <div class="absolute top-0 left-0 size-3/12 p-2">
+            {{-- <div class="scroll-smooth">
                 <ul>
                     @foreach ($comments as $value)
                         <div class="bg-slate-100 rounded-lg mb-2">
@@ -22,9 +18,12 @@
                         </div>
                     @endforeach
                 </ul>
-            </div>
+            </div> --}}
 
-            <form class="justify-center" action="{{ route('addComment')}}" method="POST">
+            <p>{{ $data['name'] }}</p>
+            <p>{{ $data['titikUkur'] }}</p>
+
+            <form class="justify-center" action="{{ route('submit')}}" method="POST">
                 @csrf
                 <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
                     <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
@@ -39,6 +38,10 @@
                 </div>
             </form>
         </div>
+
+        <iframe class="absolute top-0 right-0 size-9/12 h-screen" src="{{$data['link']}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- width="560" height="315" -->
+        <!-- w-full h-screen size-9/12 -->
     </div>
 </body>
 </html>

@@ -12,13 +12,13 @@ class Comment extends Model
     protected $guarded = ['id'];
     protected $fillable = [
         'comment',
-        'user_id',
+        // 'user_id',
         'map_id'
     ];
 
-    public function user(): BelongsTo {
-        return $this->belongsTo(User::class, 'user_id', 'id');
-    }
+    // public function user(): BelongsTo {
+    //     return $this->belongsTo(User::class, 'user_id', 'id');
+    // }
 
     public function map(): BelongsTo {
         return $this->belongsTo(Map::class, 'map_id', 'id');

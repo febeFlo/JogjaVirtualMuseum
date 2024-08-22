@@ -7,14 +7,20 @@
     <title>Home Page</title>
 </head>
 <body>
-    <img src="{{ asset('assets/peta.jpg') }}" alt="Peta Yogyakarta" class="w-screen"/>
+    <div class="relative">
+        <img src="{{ asset('assets/peta.png') }}" alt="Peta Yogyakarta" class="m-24"/>
 
-    @foreach ($data as $value)
-        @if ($value['id']=='1')
-            <a href="getLink/{{$value['id']}}"><img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="absolute top-0 w-[45px] mt-[120px] ml-[300px]"/></a>
-        @elseif ($value['id']=='2')
-            <a href="getLink/{{$value['id']}}"><img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="absolute top-0 w-[45px] mt-[320px] ml-[900px]"/></a>
-        @endif
-    @endforeach
+        @foreach ($data as $value)
+            @if ($value['id']=='1')
+                <a href="getLink/{{$value['id']}}">
+                    <img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="absolute w-[45px]" style="top: 20%; left: 30%;"/>
+                </a>
+            @elseif ($value['id']=='2')
+                <a href="getLink/{{$value['id']}}">
+                    <img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="absolute w-[45px]" style="top: 80%; left: 65%;"/>
+                </a>
+            @endif
+        @endforeach
+    </div>
 </body>
 </html>
