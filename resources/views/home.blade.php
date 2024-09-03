@@ -58,9 +58,18 @@
                 ];
             @endphp
 
-            <a href="getLink/{{$value['id']}}">
-                <img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="absolute w-[45px]" style="top: {{ $coordinates[$value['id']]['x'] }}; left: {{ $coordinates[$value['id']]['y'] }};"/>
+            <a href="getLink/{{$value['id']}}" class="group">
+                <div class="absolute flex flex-col" style="top: {{ $coordinates[$value['id']]['x'] }}; left: {{ $coordinates[$value['id']]['y'] }};">
+                    <x-location-pointer
+                        name="{{ $value['name'] }}"
+                        titikUkur="{{ $value['titikUkur'] }}"
+                        imageUrl="{{ asset('path/to/image.png') }}"
+                    />
+                </div>
             </a>
+            {{-- <a href="getLink/{{$value['id']}}" class="group">
+                <img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="absolute w-[45px]" style="top: {{ $coordinates[$value['id']]['x'] }}; left: {{ $coordinates[$value['id']]['y'] }};"/>
+            </a> --}}
         @endforeach
     </div>
 </body>
