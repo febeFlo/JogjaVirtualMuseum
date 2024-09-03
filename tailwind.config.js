@@ -26,7 +26,8 @@ module.exports = {
     content: [
       "./resources/**/*.blade.php",
       "./resources/**/*.js",
-      "./node_modules/flowbite/**/*.js"
+      "./node_modules/flowbite/**/*.js",
+      "./src/**/*.{html,js}"
     ],
     theme: {
       extend: {},
