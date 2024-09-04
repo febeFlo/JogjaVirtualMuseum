@@ -3,10 +3,12 @@
 use App\Actions\Fortify\CreateNewUser;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\Kuesioner1Controller;
 use App\Http\Controllers\MapController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\Comment;
+use App\Models\Kuesioner1;
 
 Route::get('/', function () {
    return view('login');
@@ -22,7 +24,7 @@ Route::get('/video', function() {
 })->name('video');
 
 Route::get('getLink/{id}', [MapController::class, 'getLink']);
-Route::post('submit', [CommentController::class, 'submit'])->name('submit');
+// Route::post('submit', [CommentController::class, 'submit'])->name('submit');
 //Route::post('/addComment', [CommentController::class, 'addComment'])->name('addComment');
 
 Route::middleware([
@@ -36,3 +38,5 @@ Route::middleware([
 });
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
+
+Route::post('/submit1', [Kuesioner1Controller::class, 'submit'])->name('submit1');

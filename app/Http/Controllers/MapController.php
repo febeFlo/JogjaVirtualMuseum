@@ -22,8 +22,8 @@ class MapController extends Controller
     public function getLink($id)
     {
         $data = Map::find($id);
-        $comments = Comment::where('map_id', $id)->get();
+        $locations = Map::all();
 
-        return view('video', compact('data', 'comments', 'id'));
+        return view('video', compact('data', 'locations', 'id'));
     }
 }

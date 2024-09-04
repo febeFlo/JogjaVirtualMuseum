@@ -20,10 +20,23 @@
                 </ul>
             </div> --}}
 
-            <p>{{ $data['name'] }}</p>
-            <p>{{ $data['titikUkur'] }}</p>
+            <p class="font-bold justify-center text-xl">{{ $data['name'] }}</p>
+            <p class="justify-center">{{ $data['titikUkur'] }}</p>
 
-            <form class="justify-center" action="{{ route('submit')}}" method="POST">
+            <h2 class="pt-8">1. Pilih 5 spot yang paling mewakili soundscape Kota Yogyakarta</h2>
+            <form action="{{ route('submit1') }}" method="POST">
+                @csrf
+                <div class="mt-3" style="height: 60vh; overflow: auto;">
+                    @foreach ($locations as $location)
+                        <input type="checkbox" name="location[]" value="{{ $location['name'] }}"> {{ $location['name'] }}<br>
+                    @endforeach
+                </div>
+                <button type="submit" class="inline-flex justify-center items-center py-2.5 px-4 mt-3 font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200">
+                    Selanjutnya
+                </button>
+            </form>
+
+            {{-- <form class="justify-center" action="{{ route('submit')}}" method="POST">
                 @csrf
                 <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
                     <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
@@ -36,7 +49,7 @@
                         </button>
                     </div>
                 </div>
-            </form>
+            </form> --}}
         </div>
 
         <iframe class="absolute top-0 right-0 size-9/12 h-screen" src="{{$data['link']}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
