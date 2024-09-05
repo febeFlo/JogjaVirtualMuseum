@@ -19,7 +19,10 @@ Route::get('/video', function() {
 })->name('video');
 
 Route::post('/login', [UserController::class, 'login'])->name('login');
-Route::post('/logout', [UserController::class, 'logout'])->name('logout');
+// Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+Route::get('/logout', function() {
+    return view('login');
+})->name('logout');
 
 Route::get('/home', [MapController::class, 'show'])->name('home');
 Route::get('/vote', [Kuesioner1Controller::class, 'show'])->name('vote');

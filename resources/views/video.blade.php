@@ -8,7 +8,10 @@
 </head>
 <body>
     <div>
-        <div class="absolute top-0 left-0 size-3/12 p-2">
+        <div class="flex items-center">
+            <a href="{{ route('home') }}"><img src="{{ asset('assets/back.png') }}" class="w-[20px] mt-3 ml-2"></a>
+        </div>
+        <div class="absolute top-0 left-0 size-3/12 p-2 ml-6">
             {{-- <div class="scroll-smooth">
                 <ul>
                     @foreach ($comments as $value)
@@ -87,6 +90,7 @@
                     <textarea id="text" name="text" rows="4" class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Tuliskan narasi singkat..." required ></textarea>
 
                     <input type="hidden" id="map_id" name="map_id" value="{{ $data['id'] }}">
+                    <input type="hidden" id="user_id" name="user_id" value="{{ Auth::user()->id }}">
                 </div>
                 <button type="submit" class="inline-flex justify-center items-center py-2.5 px-4 mt-3 font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200">
                     Kirim

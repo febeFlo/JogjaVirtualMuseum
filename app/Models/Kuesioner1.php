@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Kuesioner1 extends Model
 {
@@ -15,6 +16,11 @@ class Kuesioner1 extends Model
         'lokasi2',
         'lokasi3',
         'lokasi4',
-        'lokasi5'
+        'lokasi5',
+        'user_id'
     ];
+
+    public function user(): BelongsTo {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

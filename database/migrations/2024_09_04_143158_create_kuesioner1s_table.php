@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('lokasi3');
             $table->string('lokasi4');
             $table->string('lokasi5');
+            $table->unsignedBigInteger('user_id')->index();
+            $table->foreign('user_id')->on('users')->references('id')->onUpdate('cascade');
             $table->timestamps();
         });
     }

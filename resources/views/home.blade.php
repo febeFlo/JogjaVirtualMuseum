@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <title>Home Page</title>
 
     <style>
@@ -15,57 +17,83 @@
     </style>
 </head>
 <body>
-    <div class="text-center pt-5 w-[100px]">
-        <a href="vote" class="centered-button bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Vote</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <div>
+        <nav class="p-[10px] bg-white border-gray-200">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="home" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="self-center text-xl font-semibold whitespace-nowrap">Jogja Virtual Museum</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-yellow-100">
+                        <li>
+                            <a href="vote" class="centered-button bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Vote</a>
+                            <a href="logout" class="centered-button bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
     <div class="relative">
-        <img src="{{ asset('assets/peta.png') }}" alt="Peta Yogyakarta" class="m-24" width="17177" height="21054"/>
+        <img src="{{ asset('assets/peta.png') }}" alt="Peta Yogyakarta" width="17177" height="21054"/>
 
         @foreach ($data as $value)
             @php
                 $coordinates = [
-                    '1' => ['x' => '29%', 'y' => '61%'],
-                    '2' => ['x' => '20.5%', 'y' => '42.5%'],
-                    '3' => ['x' => '29%', 'y' => '41%'],
-                    '4' => ['x' => '45%', 'y' => '40%'],
-                    '5' => ['x' => '21%', 'y' => '42.5%'],
-                    '6' => ['x' => '26.8%', 'y' => '57.5%'],
-                    '7' => ['x' => '21.5%', 'y' => '50%'],
-                    '8' => ['x' => '21.8%', 'y' => '49%'],
-                    '9' => ['x' => '31%', 'y' => '67%'],
-                    '10' => ['x' => '21%', 'y' => '55.5%'],
-                    '11' => ['x' => '28.8%', 'y' => '46.3%'],
-                    '12' => ['x' => '47.5%', 'y' => '38%'],
-                    '13' => ['x' => '52.3%', 'y' => '37.8%'],
-                    '14' => ['x' => '11.5%', 'y' => '58%'],
+                    '1' => ['x' => '30%', 'y' => '51.5%'],
+                    '2' => ['x' => '21.5%', 'y' => '33%'],
+                    '3' => ['x' => '30%', 'y' => '31.5%'],
+                    '4' => ['x' => '46%', 'y' => '30.5%'],
+                    '5' => ['x' => '22%', 'y' => '33%'],
+                    '6' => ['x' => '27.8%', 'y' => '48%'],
+                    '7' => ['x' => '22.5%', 'y' => '40.5%'],
+                    '8' => ['x' => '22.8%', 'y' => '39.5%'],
+                    '9' => ['x' => '32%', 'y' => '57.5%'],
+                    '10' => ['x' => '22%', 'y' => '46%'],
+                    '11' => ['x' => '29.8%', 'y' => '36.8%'],
+                    '12' => ['x' => '48.5%', 'y' => '28.5%'],
+                    '13' => ['x' => '53.3%', 'y' => '28.3%'],
+                    '14' => ['x' => '12.5%', 'y' => '48.5%'],
                     '15' => ['x' => '', 'y' => ''],
-                    '16' => ['x' => '46.5%', 'y' => '89%'],
-                    '17' => ['x' => '80.8%', 'y' => '97%'],
+                    '16' => ['x' => '47.5%', 'y' => '79.5%'],
+                    '17' => ['x' => '81.8%', 'y' => '87.5%'],
                     '18' => ['x' => '', 'y' => ''],
                     '19' => ['x' => '', 'y' => ''],
                     '20' => ['x' => '', 'y' => ''],
                     '21' => ['x' => '', 'y' => ''],
-                    '22' => ['x' => '49%', 'y' => '36.5%'],
-                    '23' => ['x' => '62.8%', 'y' => '36%'],
-                    '24' => ['x' => '59.3%', 'y' => '37.3%'],
+                    '22' => ['x' => '50%', 'y' => '27%'],
+                    '23' => ['x' => '63.8%', 'y' => '26.5%'],
+                    '24' => ['x' => '60.3%', 'y' => '27.8%'],
                     '25' => ['x' => '', 'y' => ''],
-                    '26' => ['x' => '44%', 'y' => '20.4%'],
+                    '26' => ['x' => '45%', 'y' => '10.9%'],
                     '27' => ['x' => '', 'y' => ''],
-                    '28' => ['x' => '38%', 'y' => '70.5%'],
-                    '29' => ['x' => '54.5%', 'y' => '26%'],
-                    '30' => ['x' => '61%', 'y' => '47.2%'],
-                    '31' => ['x' => '68.5%', 'y' => '44.5%'],
-                    '32' => ['x' => '48.5%', 'y' => '94%'],
-                    '33' => ['x' => '59%', 'y' => '36.8%'],
-                    '34' => ['x' => '70.3%', 'y' => '45.3%'],
-                    '35' => ['x' => '42%', 'y' => '40.3%'],
-                    '36' => ['x' => '41.7%', 'y' => '42%'],
-                    '37' => ['x' => '57%', 'y' => '33%'],
-                    '38' => ['x' => '19%', 'y' => '41%'],
-                    '39' => ['x' => '45.2%', 'y' => '34%'],
-                    '40' => ['x' => '65%', 'y' => '74.5%'],
-                    '41' => ['x' => '49%', 'y' => '93.7%'],
-                    '42' => ['x' => '69.5%', 'y' => '50.5%'],
+                    '28' => ['x' => '39%', 'y' => '61%'],
+                    '29' => ['x' => '55.5%', 'y' => '16.5%'],
+                    '30' => ['x' => '62%', 'y' => '37.7%'],
+                    '31' => ['x' => '69.5%', 'y' => '35%'],
+                    '32' => ['x' => '49.5%', 'y' => '84.5%'],
+                    '33' => ['x' => '60%', 'y' => '27.3%'],
+                    '34' => ['x' => '71.3%', 'y' => '35.8%'],
+                    '35' => ['x' => '43%', 'y' => '30.8%'],
+                    '36' => ['x' => '42.7%', 'y' => '32.5%'],
+                    '37' => ['x' => '58%', 'y' => '23.5%'],
+                    '38' => ['x' => '20%', 'y' => '31.5%'],
+                    '39' => ['x' => '46.2%', 'y' => '24.5%'],
+                    '40' => ['x' => '66%', 'y' => '65%'],
+                    '41' => ['x' => '50%', 'y' => '84.2%'],
+                    '42' => ['x' => '70.5%', 'y' => '41%'],
                 ];
             @endphp
 

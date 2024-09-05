@@ -15,6 +15,7 @@ class Kuesioner1Controller extends Controller
         $request->validate([
             'location' => 'required|array|size:5',
             'location.*' => 'required|string',
+            'user_id' => 'required|integer|exists:users,id'
         ]);
 
         $kuesioner1 = new Kuesioner1();
@@ -23,6 +24,7 @@ class Kuesioner1Controller extends Controller
         $kuesioner1->lokasi3 = $request->input('location')[2];
         $kuesioner1->lokasi4 = $request->input('location')[3];
         $kuesioner1->lokasi5 = $request->input('location')[4];
+        $kuesioner1->user_id = $request->input('user_id');
         $kuesioner1->save();
 
         return redirect()->route('home')->with('success', 'Registration successful!');

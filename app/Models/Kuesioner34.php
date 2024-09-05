@@ -20,10 +20,15 @@ class Kuesioner34 extends Model
         'lokasi_ramai',
         'lokasi_membosankan',
         'narasi',
-        'map_id'
+        'map_id',
+        'user_id'
     ];
 
     public function map(): BelongsTo {
         return $this->belongsTo(Map::class, 'map_id', 'id');
+    }
+
+    public function user(): BelongsTo {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

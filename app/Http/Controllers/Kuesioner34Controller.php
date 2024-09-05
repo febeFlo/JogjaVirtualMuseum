@@ -17,6 +17,7 @@ class Kuesioner34Controller extends Controller
             'answer.*' => 'required|string',
             'text' => 'required|string',
             'map_id' => 'required|integer|exists:maps,id',
+            'user_id' => 'required|integer|exists:users,id'
         ]);
 
         $kuesioner34 = new Kuesioner34();
@@ -30,6 +31,7 @@ class Kuesioner34Controller extends Controller
         $kuesioner34->lokasi_membosankan = $request->input('answer')[7];
         $kuesioner34->narasi = $request->input('text');
         $kuesioner34->map_id = $request->input('map_id');
+        $kuesioner34->user_id = $request->input('user_id');
         $kuesioner34->save();
 
         return redirect()->route('home')->with('success', 'Comment added successfully.');
