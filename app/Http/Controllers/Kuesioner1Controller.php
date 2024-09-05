@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kuesioner1;
 use App\Http\Requests\StoreKuesioner1Request;
 use App\Http\Requests\UpdateKuesioner1Request;
+use App\Models\Map;
 use Illuminate\Http\Request;
 
 class Kuesioner1Controller extends Controller
@@ -12,11 +13,8 @@ class Kuesioner1Controller extends Controller
     public function submit(Request $request)
     {
         $request->validate([
-            'lokasi1' => 'required',
-            'lokasi2' => 'required',
-            'lokasi3' => 'required',
-            'lokasi4' => 'required',
-            'lokasi5' => 'required'
+            'location' => 'required|array|size:5',
+            'location.*' => 'required|string',
         ]);
 
         $kuesioner1 = new Kuesioner1();
@@ -28,6 +26,13 @@ class Kuesioner1Controller extends Controller
         $kuesioner1->save();
 
         return redirect()->route('home')->with('success', 'Registration successful!');
+    }
+
+    public function show()
+    {
+        $data = Map::all();
+
+        return view('vote', compact('data'));
     }
 
 }

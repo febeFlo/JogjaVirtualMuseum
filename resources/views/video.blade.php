@@ -23,16 +23,73 @@
             <p class="font-bold justify-center text-xl">{{ $data['name'] }}</p>
             <p class="justify-center">{{ $data['titikUkur'] }}</p>
 
-            <h2 class="pt-8">1. Pilih 5 spot yang paling mewakili soundscape Kota Yogyakarta</h2>
-            <form action="{{ route('submit1') }}" method="POST">
+            <form action="{{ route('submit2') }}" method="POST">
                 @csrf
-                <div class="mt-3" style="height: 60vh; overflow: auto;">
-                    @foreach ($locations as $location)
-                        <input type="checkbox" name="location[]" value="{{ $location['name'] }}"> {{ $location['name'] }}<br>
-                    @endforeach
+                <div class="mt-3" style="height: 75vh; overflow: auto;">
+                    <h2 class="font-bold">Rating soundscape</h2>
+                    <p>Soundscape di lokasi menyenangkan:</p>
+                    <input type="checkbox" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="tidak setuju"> tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="netral"> netral<br>
+                    <input type="checkbox" name="answer[]" value="setuju"> setuju<br>
+                    <input type="checkbox" name="answer[]" value="sangat setuju"> sangat setuju<br>
+
+                    <p>Soundscape di lokasi ribut/semrawut:</p>
+                    <input type="checkbox" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="tidak setuju"> tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="netral"> netral<br>
+                    <input type="checkbox" name="answer[]" value="setuju"> setuju<br>
+                    <input type="checkbox" name="answer[]" value="sangat setuju"> sangat setuju<br>
+
+                    <p>Soundscape di lokasi bersemangat:</p>
+                    <input type="checkbox" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="tidak setuju"> tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="netral"> netral<br>
+                    <input type="checkbox" name="answer[]" value="setuju"> setuju<br>
+                    <input type="checkbox" name="answer[]" value="sangat setuju"> sangat setuju<br>
+
+                    <p>Soundscape di lokasi sepi:</p>
+                    <input type="checkbox" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="tidak setuju"> tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="netral"> netral<br>
+                    <input type="checkbox" name="answer[]" value="setuju"> setuju<br>
+                    <input type="checkbox" name="answer[]" value="sangat setuju"> sangat setuju<br>
+
+                    <p>Soundscape di lokasi tenang:</p>
+                    <input type="checkbox" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="tidak setuju"> tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="netral"> netral<br>
+                    <input type="checkbox" name="answer[]" value="setuju"> setuju<br>
+                    <input type="checkbox" name="answer[]" value="sangat setuju"> sangat setuju<br>
+
+                    <p>Soundscape di lokasi mengganggu:</p>
+                    <input type="checkbox" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="tidak setuju"> tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="netral"> netral<br>
+                    <input type="checkbox" name="answer[]" value="setuju"> setuju<br>
+                    <input type="checkbox" name="answer[]" value="sangat setuju"> sangat setuju<br>
+
+                    <p>Soundscape di lokasi ramai:</p>
+                    <input type="checkbox" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="tidak setuju"> tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="netral"> netral<br>
+                    <input type="checkbox" name="answer[]" value="setuju"> setuju<br>
+                    <input type="checkbox" name="answer[]" value="sangat setuju"> sangat setuju<br>
+
+                    <p>Soundscape di lokasi membosankan:</p>
+                    <input type="checkbox" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="tidak setuju"> tidak setuju<br>
+                    <input type="checkbox" name="answer[]" value="netral"> netral<br>
+                    <input type="checkbox" name="answer[]" value="setuju"> setuju<br>
+                    <input type="checkbox" name="answer[]" value="sangat setuju"> sangat setuju<br>
+
+                    <p class="font-bold pt-5">Narasi singkat soundscape ideal</p>
+                    <textarea id="text" name="text" rows="4" class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Tuliskan narasi singkat..." required ></textarea>
+
+                    <input type="hidden" id="map_id" name="map_id" value="{{ $data['id'] }}">
                 </div>
                 <button type="submit" class="inline-flex justify-center items-center py-2.5 px-4 mt-3 font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200">
-                    Selanjutnya
+                    Kirim
                 </button>
             </form>
 

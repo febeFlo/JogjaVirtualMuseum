@@ -5,8 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Home Page</title>
+
+    <style>
+        .centered-button {
+            justify-content: center;
+            align-items: center;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
+    <div class="text-center pt-5 w-[100px]">
+        <a href="vote" class="centered-button bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Vote</a>
+    </div>
     <div class="relative">
         <img src="{{ asset('assets/peta.png') }}" alt="Peta Yogyakarta" class="m-24" width="17177" height="21054"/>
 

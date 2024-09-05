@@ -14,4 +14,8 @@ class Map extends Model
     public function comment(): HasMany {
         return $this->hasMany(Comment::class, 'map_id', 'id');
     }
+
+    public function kuesioner34(): HasMany {
+        return $this->hasMany(Kuesioner34::class, 'map_id', 'id');
+    }
 }
