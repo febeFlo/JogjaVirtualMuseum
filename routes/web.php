@@ -11,16 +11,16 @@ use App\Http\Controllers\UserController;
 use App\Models\Comment;
 
 Route::get('/', function () {
-   return view('login');
+    return view('login');
 });
 
-Route::get('/video', function() {
+Route::get('/video', function () {
     return view('video');
 })->name('video');
 
 Route::post('/login', [UserController::class, 'login'])->name('login');
 // Route::get('/logout', [UserController::class, 'logout'])->name('logout');
-Route::get('/logout', function() {
+Route::get('/logout', function () {
     return view('login');
 })->name('logout');
 
@@ -42,6 +42,5 @@ Route::middleware([
 });
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
-
 Route::post('/submit1', [Kuesioner1Controller::class, 'submit'])->name('submit1');
 Route::post('/submit2', [Kuesioner34Controller::class, 'submit'])->name('submit2');

@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,9 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Login</title>
 </head>
+
 <body>
     <div class="flex items-center justify-center h-screen">
-        <form class="w-full max-w-md mx-auto" action="{{ route('login')}}" method="POST">
+        <form class="w-full max-w-md mx-auto" action="{{ route('login') }}" method="POST">
             @csrf
             <div class="mb-5">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
@@ -36,8 +38,10 @@
             <button type="submit"
                 class="text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-200 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Login</button>
 
-            <p class="absolute mt-3 text-sm">Don't have an account?<a href="{{ route('register') }}" class="text-indigo-500"> Register Here</a></p>
+            <p class="absolute mt-3 text-sm">Don't have an account?<a href="{{ route('register') }}"
+                    class="text-indigo-500"> Register Here</a></p>
         </form>
     </div>
 </body>
+
 </html>

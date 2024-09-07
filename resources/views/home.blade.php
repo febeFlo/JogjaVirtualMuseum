@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,16 +17,17 @@
         }
     </style>
 </head>
+
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <div>
         <nav class="p-[10px] bg-white border-gray-200">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
                 <a href="home" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="self-center text-xl font-semibold whitespace-nowrap">Jogja Virtual Museum</span>
+                    <span class="self-center font-sans text-xl font-bold whitespace-nowrap">Jogja Virtual Museum</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                     aria-controls="navbar-default" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -36,10 +38,12 @@
                 </button>
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul
-                        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-yellow-100">
+                        class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-yellow-100">
                         <li>
-                            <a href="vote" class="centered-button bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Vote</a>
-                            <a href="logout" class="centered-button bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Logout</a>
+                            <a href="vote"
+                                class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">Vote</a>
+                            <a href="logout"
+                                class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -47,7 +51,7 @@
         </nav>
     </div>
     <div class="relative">
-        <img src="{{ asset('assets/peta.png') }}" alt="Peta Yogyakarta" width="17177" height="21054"/>
+        <img src="{{ asset('assets/peta.png') }}" alt="Peta Yogyakarta" width="17177" height="21054" />
 
         @foreach ($data as $value)
             @php
@@ -97,13 +101,11 @@
                 ];
             @endphp
 
-            <a href="getLink/{{$value['id']}}" class="group">
-                <div class="absolute flex flex-col" style="top: {{ $coordinates[$value['id']]['x'] }}; left: {{ $coordinates[$value['id']]['y'] }};">
-                    <x-location-pointer
-                        name="{{ $value['name'] }}"
-                        titikUkur="{{ $value['titikUkur'] }}"
-                        imageUrl="{{ asset('path/to/image.png') }}"
-                    />
+            <a href="getLink/{{ $value['id'] }}" class="group">
+                <div class="absolute flex flex-col"
+                    style="top: {{ $coordinates[$value['id']]['x'] }}; left: {{ $coordinates[$value['id']]['y'] }};">
+                    <x-location-pointer name="{{ $value['name'] }}" titikUkur="{{ $value['titikUkur'] }}"
+                        imageUrl="{{ asset('path/to/image.png') }}" />
                 </div>
             </a>
             {{-- <a href="getLink/{{$value['id']}}" class="group">
@@ -112,6 +114,7 @@
         @endforeach
     </div>
 </body>
+
 </html>
 
 {{-- @foreach ($data as $value)
@@ -132,7 +135,7 @@
         @endforeach --}}
 
 {{-- @foreach ($data as $value)
-                @if ($value['id']=='1')
+                @if ($value['id'] == '1')
                     <a href="getLink/{{$value['id']}}">
                         <img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="absolute w-[45px]" style="top: 20%; left: 30%;"/>
                     </a>
@@ -143,11 +146,11 @@
                 @endif
             @endforeach --}}
 
-            {{-- <a href="getLink/{{$value['id']}}" style="top: {{ $coordinates[$value['id']]['top'] }}; left: {{ $coordinates[$value['id']]['left'] }};">
+{{-- <a href="getLink/{{$value['id']}}" style="top: {{ $coordinates[$value['id']]['top'] }}; left: {{ $coordinates[$value['id']]['left'] }};">
                     <img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="absolute w-[45px]"/>
                 </a> --}}
 
-                {{-- // function convertCoordinates(coordinateString) {
+{{-- // function convertCoordinates(coordinateString) {
                     //     const [latPart, lonPart] = coordinateString.split(' ');
 
                     //     // Parse latitude

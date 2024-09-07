@@ -8,6 +8,7 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
+        "./resources/**/*.js",
         './resources/views/**/*.blade.php',
     ],
 
@@ -24,13 +25,21 @@ export default {
 
 module.exports = {
     content: [
-      "./resources/**/*.blade.php",
-      "./resources/**/*.js",
-      "./node_modules/flowbite/**/*.js",
-      "./src/**/*.{html,js}"
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./node_modules/flowbite/**/*.js",
+        "./src/**/*.{html,js}"
     ],
     theme: {
-      extend: {},
+        extend: {
+            fontFamily: {
+                'sans': ['DMSans', 'sans-serif'], // Define DMSans as the default sans font
+            },
+            colors: {
+                primary: '#ffa633',  // Custom primary color (warm orange)
+                secondary: '#3399ff',  // Custom secondary color (cool blue)
+            },
+        },
     },
     plugins: [
         require('flowbite/plugin')
