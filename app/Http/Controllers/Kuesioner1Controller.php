@@ -7,6 +7,7 @@ use App\Http\Requests\StoreKuesioner1Request;
 use App\Http\Requests\UpdateKuesioner1Request;
 use App\Models\Map;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Kuesioner1Controller extends Controller
 {
@@ -18,7 +19,14 @@ class Kuesioner1Controller extends Controller
             'user_id' => 'required|integer|exists:users,id'
         ]);
 
-        $kuesioner1 = new Kuesioner1();
+
+        $kuesioner1 = Kuesioner1::where('user_id', $request->input('user_id'))->first();
+
+        if (is_null($kuesioner1)) {
+            $kuesioner1 = new Kuesioner1();
+        }
+
+
         $kuesioner1->lokasi1 = $request->input('location')[0];
         $kuesioner1->lokasi2 = $request->input('location')[1];
         $kuesioner1->lokasi3 = $request->input('location')[2];
@@ -33,8 +41,11 @@ class Kuesioner1Controller extends Controller
     public function show()
     {
         $data = Map::all();
+        $id = Auth::user()->id;
 
-        return view('vote', compact('data'));
+        $getSelected = Kuesioner1::where('user_id', $id)->first();
+
+        return view('vote', compact('data', 'getSelected'));
     }
 
 }
