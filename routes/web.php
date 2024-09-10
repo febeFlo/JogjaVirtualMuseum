@@ -14,6 +14,10 @@ Route::get('/', function () {
     return view('login');
 });
 
+Route::get('/login', function () {
+    return view('auth.register');
+});
+
 Route::get('/video', function () {
     return view('video');
 })->name('video');
