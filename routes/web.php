@@ -44,3 +44,6 @@ Route::middleware([
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/submit1', [Kuesioner1Controller::class, 'submit'])->name('submit1');
 Route::post('/submit2', [Kuesioner34Controller::class, 'submit'])->name('submit2');
+
+
+// Master Route
