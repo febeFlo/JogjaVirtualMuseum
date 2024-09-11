@@ -2,22 +2,22 @@
 
 namespace App\Filament\Resources;
 
+use App\Exports\VotesExport;
 use App\Filament\Resources\Kuesioner1Resource\Pages;
-use App\Filament\Resources\Kuesioner1Resource\RelationManagers;
 use App\Models\Kuesioner1;
+use Filament\Tables\Actions\Action;
+use Maatwebsite\Excel\Facades\Excel;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class Kuesioner1Resource extends Resource
 {
     protected static ?string $model = Kuesioner1::class;
 
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 1;
 
     protected static ?string $navigationIcon = 'heroicon-o-check-circle';
 
@@ -100,12 +100,22 @@ class Kuesioner1Resource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make()->hidden(),
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            // ->headerActions([
+            //     Action::make('export')
+            //         ->label('Export to Excel')
+            //         ->icon('heroicon-o-arrow-down-tray')
+            //         ->action(function () {
+            //             return Excel::download(new VotesExport, 'maps.xlsx');
+            //         }),
+            // ])
+            ;
     }
 
     public static function getRelations(): array
