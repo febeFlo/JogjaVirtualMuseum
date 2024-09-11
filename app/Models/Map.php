@@ -21,27 +21,27 @@ class Map extends Model
     }
 
     // Define the inverse relationship for lokasi1
-    public function kuesioner1FromLokasi1(): BelongsTo {
-        return $this->belongsTo(Kuesioner1::class, 'lokasi1', 'id');
+    public function kuesioner1FromLokasi1(): HasMany {
+        return $this->hasMany(Kuesioner1::class, 'lokasi1', 'id');
     }
 
     // Define the inverse relationship for lokasi2
-    public function kuesioner1FromLokasi2(): BelongsTo {
-        return $this->belongsTo(Kuesioner1::class, 'lokasi2', 'id');
+    public function kuesioner1FromLokasi2(): HasMany {
+        return $this->hasMany(Kuesioner1::class, 'lokasi2', 'id');
     }
 
     // Define the inverse relationship for lokasi3
-    public function kuesioner1FromLokasi3(): BelongsTo {
-        return $this->belongsTo(Kuesioner1::class, 'lokasi3', 'id');
+    public function kuesioner1FromLokasi3(): HasMany {
+        return $this->hasMany(Kuesioner1::class, 'lokasi3', 'id');
     }
 
     // Define the inverse relationship for lokasi4
-    public function kuesioner1FromLokasi4(): BelongsTo {
-        return $this->belongsTo(Kuesioner1::class, 'lokasi4', 'id');
+    public function kuesioner1FromLokasi4(): HasMany {
+        return $this->hasMany(Kuesioner1::class, 'lokasi4', 'id');
     }
 
     // Define the inverse relationship for lokasi5
-    public function kuesioner1FromLokasi5(): BelongsTo {
-        return $this->belongsTo(Kuesioner1::class, 'lokasi5', 'id');
+    public function kuesioner1FromLokasi5(): HasMany {
+        return $this->hasMany(Kuesioner1::class, 'lokasi5', 'id');
     }
 }

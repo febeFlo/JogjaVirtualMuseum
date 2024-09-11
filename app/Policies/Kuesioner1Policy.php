@@ -14,6 +14,7 @@ class Kuesioner1Policy
     public function viewAny(User $user): bool
     {
         //
+        return true;
     }
 
     /**
@@ -22,6 +23,7 @@ class Kuesioner1Policy
     public function view(User $user, Kuesioner1 $kuesioner1): bool
     {
         //
+        return true;
     }
 
     /**
@@ -30,6 +32,7 @@ class Kuesioner1Policy
     public function create(User $user): bool
     {
         //
+        return true;
     }
 
     /**
@@ -38,6 +41,7 @@ class Kuesioner1Policy
     public function update(User $user, Kuesioner1 $kuesioner1): bool
     {
         //
+        return true;
     }
 
     /**
@@ -45,7 +49,7 @@ class Kuesioner1Policy
      */
     public function delete(User $user, Kuesioner1 $kuesioner1): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -53,7 +57,7 @@ class Kuesioner1Policy
      */
     public function restore(User $user, Kuesioner1 $kuesioner1): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -61,6 +65,6 @@ class Kuesioner1Policy
      */
     public function forceDelete(User $user, Kuesioner1 $kuesioner1): bool
     {
-        //
+        return true;
     }
 }

@@ -25,23 +25,23 @@ class Kuesioner1 extends Model
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
-    public function lokasi1Map(): HasOne {
-        return $this->hasOne(Map::class, 'id', 'lokasi1');
+    public function lokasi1Map(): BelongsTo {
+        return $this->belongsTo(Map::class, 'lokasi1', 'id');
     }
 
-    public function lokasi2Map(): HasOne {
-        return $this->hasOne(Map::class, 'id', 'lokasi2');
+    public function lokasi2Map(): BelongsTo {
+        return $this->belongsTo(Map::class, 'lokasi2', 'id');
     }
 
-    public function lokasi3Map(): HasOne {
-        return $this->hasOne(Map::class, 'id', 'lokasi3');
+    public function lokasi3Map(): BelongsTo {
+        return $this->belongsTo(Map::class, 'lokasi3', 'id');
     }
 
-    public function lokasi4Map(): HasOne {
-        return $this->hasOne(Map::class, 'id', 'lokasi4');
+    public function lokasi4Map(): BelongsTo {
+        return $this->belongsTo(Map::class, 'lokasi4', 'id');
     }
 
-    public function lokasi5Map(): HasOne {
-        return $this->hasOne(Map::class, 'id', 'lokasi5');
+    public function lokasi5Map(): BelongsTo {
+        return $this->belongsTo(Map::class, 'lokasi5', 'id');
     }
 }
