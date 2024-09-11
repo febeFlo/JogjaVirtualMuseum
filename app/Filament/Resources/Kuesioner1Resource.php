@@ -63,6 +63,13 @@ class Kuesioner1Resource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('user.id')
+                    ->label('ID')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('user.name')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('lokasi1Map.name')
                     ->label('Lokasi 1')
                     ->numeric()
@@ -81,9 +88,6 @@ class Kuesioner1Resource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('lokasi5Map.name')
                     ->label('Lokasi 5')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')

@@ -73,6 +73,7 @@ class UserlinkadminResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('user.id', 'asc')
             ->filters([
                 //
             ])

@@ -73,6 +73,13 @@ class Kuesioner34Resource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('user.id')
+                    ->label('ID')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('user.name')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('lokasi_menyenangkan')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('lokasi_ribut')
@@ -90,9 +97,6 @@ class Kuesioner34Resource extends Resource
                 Tables\Columns\TextColumn::make('lokasi_membosankan')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('map.name')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
