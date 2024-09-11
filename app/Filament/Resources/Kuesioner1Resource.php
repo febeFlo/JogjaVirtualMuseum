@@ -17,7 +17,7 @@ class Kuesioner1Resource extends Resource
 {
     protected static ?string $model = Kuesioner1::class;
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 4;
 
     protected static ?string $navigationIcon = 'heroicon-o-check-circle';
 

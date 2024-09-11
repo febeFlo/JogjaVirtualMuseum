@@ -20,12 +20,19 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    public function kuesioner34(): HasMany {
+    public function kuesioner34(): HasMany
+    {
         return $this->hasMany(Kuesioner34::class, 'user_id', 'id');
     }
 
-    public function kuesioner1(): HasOne {
+    public function kuesioner1(): HasOne
+    {
         return $this->hasOne(Kuesioner1::class, 'user_id', 'id');
+    }
+
+    public function userLinkAdmin(): HasOne
+    {
+        return $this->hasOne(Userlinkadmin::class, 'user_id','id');
     }
 
     /**
