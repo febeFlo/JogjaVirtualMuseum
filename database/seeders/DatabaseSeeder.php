@@ -293,7 +293,7 @@ class DatabaseSeeder extends Seeder
 
         Map::create([
             'name' => 'Jalan Sekitar Tamansari',
-            'titikUkur' => '7°48\'25"S 110°21\'50"E',
+            'titikUkur' => '7°48\'35.5"S 110°21\'32.3"E',
             'link' => 'https://www.youtube.com/embed/5X53hoo2gnw?si=z0yJjbooLEMittaI',
             'location' => 'assets/locationPointer.png'
         ]);
