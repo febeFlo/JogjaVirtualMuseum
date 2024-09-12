@@ -26,14 +26,15 @@
                 <div class="px-5 mt-3" style="height: 60vh; overflow: auto;">
                     @foreach ($data as $location)
                         <div class="flex items-center mb-2">
-                            <input
-                                type="checkbox"
-                                id="checkbox-{{ $loop->index }}"
-                                name="location[]"
-                                value="{{ $location['id'] }}"
-                                class="mr-2 peer"
-                                @if($location['id']==$getSelected->lokasi1||$location['id']==$getSelected->lokasi2||$location['id']==$getSelected->lokasi3||$location['id']==$getSelected->lokasi4||$location['id']==$getSelected->lokasi5) checked @endif
-                            />
+                            <input type="checkbox" id="checkbox-{{ $loop->index }}" name="location[]"
+                                value="{{ $location['id'] }}" class="mr-2 peer"
+                                @if (
+                                    $getSelected &&
+                                        ($location['id'] == $getSelected->lokasi1 ||
+                                            $location['id'] == $getSelected->lokasi2 ||
+                                            $location['id'] == $getSelected->lokasi3 ||
+                                            $location['id'] == $getSelected->lokasi4 ||
+                                            $location['id'] == $getSelected->lokasi5)) checked @endif />
                             <label for="checkbox-{{ $loop->index }}" class="flex items-center cursor-pointer">
                                 {{ $location['name'] }}
                             </label>
