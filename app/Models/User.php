@@ -3,6 +3,9 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -12,13 +15,26 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        // Ensure the relationship is loaded
+        $userLinkAdmin = $this->userLinkAdmin;
+
+        // Check if the userLinkAdmin record exists and isAdmin is true
+        if ($userLinkAdmin && $userLinkAdmin->isAdmin) {
+            return true;
+        }
+
+        return false; // Return false if not an admin
+    }
 
     public function kuesioner34(): HasMany
     {
@@ -32,7 +48,7 @@ class User extends Authenticatable
 
     public function userLinkAdmin(): HasOne
     {
-        return $this->hasOne(Userlinkadmin::class, 'user_id','id');
+        return $this->hasOne(Userlinkadmin::class, 'user_id', 'id');
     }
 
     /**
