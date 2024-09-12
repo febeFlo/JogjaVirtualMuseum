@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Exports\VotesExport;
 use App\Filament\Resources\Kuesioner34Resource\Pages;
 use App\Filament\Resources\Kuesioner34Resource\RelationManagers;
 use App\Models\Kuesioner34;
@@ -10,8 +11,8 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Actions\Action;
+use Maatwebsite\Excel\Facades\Excel;
 
 class Kuesioner34Resource extends Resource
 {
@@ -119,7 +120,17 @@ class Kuesioner34Resource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->headerActions([
+                Action::make('export')
+                    ->label('Export to Excel')
+                    ->icon('heroicon-o-arrow-down-tray')
+                    ->color('success') // Makes the button green
+                    ->action(function () {
+                        return Excel::download(new VotesExport, 'maps.xlsx');
+                    }),
+            ])
+        ;
     }
 
     public static function getRelations(): array
