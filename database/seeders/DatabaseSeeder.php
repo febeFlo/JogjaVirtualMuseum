@@ -167,14 +167,14 @@ class DatabaseSeeder extends Seeder
 
         Map::create([
             'name' => 'Masjid Kotagede 1',
-            'titikUkur' => '7°49\'46"S 110°23\'70"E',
+            'titikUkur' => '7°49\'45.7"S 110°23\'53.4"E',
             'link' => 'https://www.youtube.com/embed/qWYZd3SOynI?si=4D2-Ywn4yXts2boH',
             'location' => 'assets/locationPointer.png'
         ]);
 
         Map::create([
             'name' => 'Masjid Kotagede 2',
-            'titikUkur' => '7°49\'46"S 110°23\'70"E',
+            'titikUkur' => '7°49\'45.7"S 110°23\'53.4"E',
             'link' => 'https://www.youtube.com/embed/SdOB9RfF-Xo?si=PzCC3Ga_G93YneLF',
             'location' => 'assets/locationPointer.png'
         ]);
@@ -222,7 +222,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Map::create([
-            'name' => 'Mandakalakrida',
+            'name' => 'Mandala krida',
             'titikUkur' => '7°47\'46"S 110°22\'58"E',
             'link' => 'https://www.youtube.com/embed/LfW3KFsG5tw?si=lqRVJOV9b9soAiJI',
             'location' => 'assets/locationPointer.png'
@@ -237,14 +237,14 @@ class DatabaseSeeder extends Seeder
 
         Map::create([
             'name' => 'Ndalem Pujokusuman 1',
-            'titikUkur' => '7°48\'30"S 110°21\'25"E',
+            'titikUkur' => '7°48\'45.6"S 110°22\'16.2"E',
             'link' => 'https://www.youtube.com/embed/QxqItiyaUxU?si=Ln7YWGVl6TRYhXMO',
             'location' => 'assets/locationPointer.png'
         ]);
 
         Map::create([
             'name' => 'Ndalem Pujokusuman 2',
-            'titikUkur' => '7°48\'30"S 110°21\'25"E',
+            'titikUkur' => '7°48\'45.6"S 110°22\'16.2"E',
             'link' => 'https://www.youtube.com/embed/MQd-Zh-4D3Q?si=CGeCvGLbjjXr9bfM',
             'location' => 'assets/locationPointer.png'
         ]);
