@@ -24,7 +24,7 @@
         <nav class="p-[10px] bg-white border-gray-200">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
                 <a href="home" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="self-center font-sans text-xl font-bold whitespace-nowrap">Jogja Virtual Museum</span>
+                    <span class="self-center font-sans text-xl font-bold whitespace-nowrap">Jogja Virtual Soundscape</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button"
                     class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
