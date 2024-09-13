@@ -43,7 +43,7 @@
                         <li>
                             <a href="list-landmarks"
                                 class="px-4 py-2 mr-4 font-bold text-white bg-gray-500 rounded-xl hover:bg-gray-600 centered-button">List
-                                Landmarks</a>
+                                Lokasi Ikonik</a>
                             <a href="vote"
                                 class="px-4 py-2 font-bold text-white bg-orange-500 rounded-xl centered-button hover:bg-orange-400">Vote</a>
                             @if ($qmethod)

@@ -13,9 +13,9 @@
     <div class="flex items-center justify-center h-screen">
         <div class="max-w-sm p-6 bg-white rounded-lg shadow-md">
             <h2 class="pt-8 text-xl font-bold text-center">
-                List Landmarks
+                List Lokasi Ikonik
             </h2>
-            <div class="px-5 mt-3" style="height: 60vh; overflow: auto;">
+            <div class="px-5 my-5" style="height: 60vh; overflow: auto;">
                 @foreach ($data as $location)
                     <div class="flex items-center mb-2">
                         <a href="getLink/{{ $location['id'] }}" class="group">
@@ -26,6 +26,11 @@
                         </a>
                     </div>
                 @endforeach
+            </div>
+            <div class="flex justify-center mt-5">
+                <a href="home" class="px-4 py-2 font-bold text-white bg-blue-500 hover:bg-blue-600 rounded-xl">
+                    Kembali ke map
+                </a>
             </div>
         </div>
     </div>

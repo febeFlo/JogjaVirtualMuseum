@@ -11,7 +11,7 @@
 
 <div class="relative group">
     <img src="{{ asset('assets/locationPointer.png') }}" alt="Location Pointer" class="w-[45px]" />
-    <div class="absolute left-0 top-full mt-2 max-w-[300px] flex flex-col hidden opacity-0 group-hover:flex group-hover:opacity-100 group-hover:transition-opacity transition-opacity duration-300 bg-[#f8f8f8] rounded-lg shadow-lg overflow-hidden">
+    <div class="absolute left-0 z-50 top-full mt-2 max-w-[300px] flex flex-col hidden opacity-0 group-hover:flex group-hover:opacity-100 group-hover:transition-opacity transition-opacity duration-300 bg-[#f8f8f8] rounded-lg shadow-lg overflow-hidden">
         <img src="{{ asset('assets/jogjaView.jpg') }}" class="object-cover w-full h-auto" />
         <div class="p-4 description">
             <p class="font-bold">{{ $name }}</p>
