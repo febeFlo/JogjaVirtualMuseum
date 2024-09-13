@@ -35,60 +35,60 @@
                 <div class="mt-3 overflow-auto ps-3" style="height: 75vh;">
                     <h2 class="font-bold">Rating soundscape</h2>
                     <p>Soundscape di lokasi menyenangkan:</p>
-                    <input type="radio" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[]" value="netral"> netral<br>
-                    <input type="radio" name="answer[]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[]" value="sangat setuju"> sangat setuju<br>
+                    <input type="radio" name="answer[0]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="radio" name="answer[0]" value="tidak setuju"> tidak setuju<br>
+                    <input type="radio" name="answer[0]" value="netral"> netral<br>
+                    <input type="radio" name="answer[0]" value="setuju"> setuju<br>
+                    <input type="radio" name="answer[0]" value="sangat setuju"> sangat setuju<br>
 
                     <p>Soundscape di lokasi ribut/semrawut:</p>
-                    <input type="radio" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[]" value="netral"> netral<br>
-                    <input type="radio" name="answer[]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[]" value="sangat setuju"> sangat setuju<br>
+                    <input type="radio" name="answer[1]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="radio" name="answer[1]" value="tidak setuju"> tidak setuju<br>
+                    <input type="radio" name="answer[1]" value="netral"> netral<br>
+                    <input type="radio" name="answer[1]" value="setuju"> setuju<br>
+                    <input type="radio" name="answer[1]" value="sangat setuju"> sangat setuju<br>
 
                     <p>Soundscape di lokasi bersemangat:</p>
-                    <input type="radio" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[]" value="netral"> netral<br>
-                    <input type="radio" name="answer[]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[]" value="sangat setuju"> sangat setuju<br>
+                    <input type="radio" name="answer[2]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="radio" name="answer[2]" value="tidak setuju"> tidak setuju<br>
+                    <input type="radio" name="answer[2]" value="netral"> netral<br>
+                    <input type="radio" name="answer[2]" value="setuju"> setuju<br>
+                    <input type="radio" name="answer[2]" value="sangat setuju"> sangat setuju<br>
 
                     <p>Soundscape di lokasi sepi:</p>
-                    <input type="radio" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[]" value="netral"> netral<br>
-                    <input type="radio" name="answer[]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[]" value="sangat setuju"> sangat setuju<br>
+                    <input type="radio" name="answer[3]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="radio" name="answer[3]" value="tidak setuju"> tidak setuju<br>
+                    <input type="radio" name="answer[3]" value="netral"> netral<br>
+                    <input type="radio" name="answer[3]" value="setuju"> setuju<br>
+                    <input type="radio" name="answer[3]" value="sangat setuju"> sangat setuju<br>
 
                     <p>Soundscape di lokasi tenang:</p>
-                    <input type="radio" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[]" value="netral"> netral<br>
-                    <input type="radio" name="answer[]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[]" value="sangat setuju"> sangat setuju<br>
+                    <input type="radio" name="answer[4]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="radio" name="answer[4]" value="tidak setuju"> tidak setuju<br>
+                    <input type="radio" name="answer[4]" value="netral"> netral<br>
+                    <input type="radio" name="answer[4]" value="setuju"> setuju<br>
+                    <input type="radio" name="answer[4]" value="sangat setuju"> sangat setuju<br>
 
                     <p>Soundscape di lokasi mengganggu:</p>
-                    <input type="radio" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[]" value="netral"> netral<br>
-                    <input type="radio" name="answer[]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[]" value="sangat setuju"> sangat setuju<br>
+                    <input type="radio" name="answer[5]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="radio" name="answer[5]" value="tidak setuju"> tidak setuju<br>
+                    <input type="radio" name="answer[5]" value="netral"> netral<br>
+                    <input type="radio" name="answer[5]" value="setuju"> setuju<br>
+                    <input type="radio" name="answer[5]" value="sangat setuju"> sangat setuju<br>
 
                     <p>Soundscape di lokasi ramai:</p>
-                    <input type="radio" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[]" value="netral"> netral<br>
-                    <input type="radio" name="answer[]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[]" value="sangat setuju"> sangat setuju<br>
+                    <input type="radio" name="answer[6]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="radio" name="answer[6]" value="tidak setuju"> tidak setuju<br>
+                    <input type="radio" name="answer[6]" value="netral"> netral<br>
+                    <input type="radio" name="answer[6]" value="setuju"> setuju<br>
+                    <input type="radio" name="answer[6]" value="sangat setuju"> sangat setuju<br>
 
                     <p>Soundscape di lokasi membosankan:</p>
-                    <input type="radio" name="answer[]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[]" value="netral"> netral<br>
-                    <input type="radio" name="answer[]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[]" value="sangat setuju"> sangat setuju<br>
+                    <input type="radio" name="answer[7]" value="sangat tidak setuju"> sangat tidak setuju<br>
+                    <input type="radio" name="answer[7]" value="tidak setuju"> tidak setuju<br>
+                    <input type="radio" name="answer[7]" value="netral"> netral<br>
+                    <input type="radio" name="answer[7]" value="setuju"> setuju<br>
+                    <input type="radio" name="answer[7]" value="sangat setuju"> sangat setuju<br>
 
                     <p class="pt-5 font-bold">Narasi singkat soundscape ideal</p>
                     <textarea id="text" name="text" rows="4"
