@@ -32,6 +32,7 @@ class Kuesioner1Controller extends Controller
         $kuesioner1->lokasi3 = $request->input('location')[2];
         $kuesioner1->lokasi4 = $request->input('location')[3];
         $kuesioner1->lokasi5 = $request->input('location')[4];
+        $kuesioner1->titik_tambahan = $request->input('text');
         $kuesioner1->user_id = $request->input('user_id');
         $kuesioner1->save();
 

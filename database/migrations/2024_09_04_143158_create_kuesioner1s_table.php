@@ -25,6 +25,7 @@ return new class extends Migration
             $table->foreign('lokasi5')->on('maps')->references('id')->onUpdate('cascade');
             $table->unsignedBigInteger('user_id')->index();
             $table->foreign('user_id')->on('users')->references('id')->onUpdate('cascade');
+            $table->string('titik_tambahan')->nullable();
             $table->timestamps();
         });
     }

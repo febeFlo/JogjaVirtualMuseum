@@ -42,6 +42,12 @@
                     @endforeach
                 </div>
 
+                <div class="flex items-center justify-center">
+                    <textarea id="text" name="text" rows="2"
+                        class="w-full px-1 my-2 text-sm text-gray-900 bg-white border-1 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                        placeholder="Tuliskan lokasi iconic yang menurut anda perlu ditambah. Gunakan (,) jika lebih dari 1" required></textarea>
+                </div>
+
                 <input type="hidden" id="user_id" name="user_id" value="{{ Auth::user()->id }}">
                 <div class="flex items-center justify-center">
                     <button type="submit"

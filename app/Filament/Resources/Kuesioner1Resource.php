@@ -90,6 +90,8 @@ class Kuesioner1Resource extends Resource
                     ->label('Lokasi 5')
                     ->numeric()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('titik_tambahan')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -119,7 +121,7 @@ class Kuesioner1Resource extends Resource
             //             return Excel::download(new VotesExport, 'maps.xlsx');
             //         }),
             // ])
-            ;
+        ;
     }
 
     public static function getRelations(): array
