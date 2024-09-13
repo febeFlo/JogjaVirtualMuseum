@@ -8,14 +8,20 @@ use App\Http\Requests\StoreMapRequest;
 use App\Http\Requests\UpdateMapRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MapController extends Controller
 {
 
     public function show()
     {
+
+        $id = Auth::user()->id;
+        $linkqmethod = User::where('id', $id)->first()->userLinkAdmin->link;
+
         return view('home', [
-            'data' => Map::all()
+            'data' => Map::all(),
+            'qmethod' => $linkqmethod
         ]);
     }
 

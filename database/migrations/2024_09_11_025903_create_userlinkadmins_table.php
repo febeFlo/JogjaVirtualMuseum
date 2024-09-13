@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('userlinkadmins', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->index();
+            $table->unsignedBigInteger('user_id')->index()->unique();
             $table->foreign('user_id')->on('users')->references('id')->onUpdate('cascade');
             $table->boolean('isAdmin')->default(FALSE);
             $table->string('link')->nullable();

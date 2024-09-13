@@ -24,7 +24,8 @@
         <nav class="p-[10px] bg-white border-gray-200">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
                 <a href="home" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="self-center font-sans text-xl font-bold whitespace-nowrap">Jogja Virtual Soundscape</span>
+                    <span class="self-center font-sans text-xl font-bold whitespace-nowrap">Jogja Virtual
+                        Soundscape</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button"
                     class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -40,6 +41,15 @@
                     <ul
                         class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-yellow-100">
                         <li>
+                            @if ($qmethod)
+                                <a href="{{ $qmethod }}"
+                                    class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">
+                                    Q Method Survey
+                                </a>
+                            @endif
+                            <a href="https://forms.gle/nfeJJs9aKC2Hm2oG6"
+                                class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">Website
+                                Survey</a>
                             <a href="vote"
                                 class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">Vote</a>
                             <a href="logout"
