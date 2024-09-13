@@ -17,6 +17,11 @@ class MapController extends Controller
     {
 
         $id = Auth::user()->id;
+
+        if (empty($id)) {
+            return redirect('/'); // Mengarahkan ke halaman '/'
+        }
+
         $linkqmethod = User::where('id', $id)->first()->userLinkAdmin->link;
 
         return view('home', [

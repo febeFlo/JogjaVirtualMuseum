@@ -40,12 +40,22 @@ class Kuesioner1Controller extends Controller
 
     public function show()
     {
-        $data = Map::all();
+        $data = Map::orderBy('name', 'asc')->get();
         $id = Auth::user()->id;
+
+        if (empty($id)) {
+            return redirect('/'); // Mengarahkan ke halaman '/'
+        }
 
         $getSelected = Kuesioner1::where('user_id', $id)->first();
 
         return view('vote', compact('data', 'getSelected'));
+    }
+
+    public function listLandmarks(){
+        $data = Map::orderBy('name', 'asc')->get();
+
+        return view('list-landmarks', compact('data'));
     }
 
 }

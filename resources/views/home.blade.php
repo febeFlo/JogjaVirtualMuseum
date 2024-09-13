@@ -39,21 +39,24 @@
                 </button>
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul
-                        class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-yellow-100">
+                        class="flex flex-col p-4 mt-4 font-medium border md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                         <li>
+                            <a href="list-landmarks"
+                                class="px-4 py-2 mr-4 font-bold text-white bg-gray-500 rounded-xl hover:bg-gray-600 centered-button">List
+                                Landmarks</a>
+                            <a href="vote"
+                                class="px-4 py-2 font-bold text-white bg-orange-500 rounded-xl centered-button hover:bg-orange-400">Vote</a>
                             @if ($qmethod)
                                 <a href="{{ $qmethod }}" target="_blank"
-                                    class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">
+                                    class="px-4 py-2 font-bold text-white bg-orange-500 rounded-xl centered-button hover:bg-orange-400">
                                     Q Method Survey
                                 </a>
                             @endif
                             <a href="https://forms.gle/nfeJJs9aKC2Hm2oG6" target="_blank"
-                                class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">Website
+                                class="px-4 py-2 font-bold text-white bg-orange-500 rounded-xl centered-button hover:bg-orange-400">Website
                                 Survey</a>
-                            <a href="vote"
-                                class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">Vote</a>
                             <a href="logout"
-                                class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">Logout</a>
+                                class="px-4 py-2 ml-4 font-bold text-white bg-red-500 rounded-xl hover:bg-red-600 centered-button">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -65,7 +68,7 @@
 
         @foreach ($data as $value)
             @php
-            // Top = X dan Left = Y
+                // Top = X dan Left = Y
                 $coordinates = [
                     '1' => ['x' => '30%', 'y' => '54.5%'],
                     '2' => ['x' => '21%', 'y' => '35.7%'],

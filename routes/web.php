@@ -30,6 +30,7 @@ Route::get('/logout', function () {
 
 Route::get('/home', [MapController::class, 'show'])->name('home');
 Route::get('/vote', [Kuesioner1Controller::class, 'show'])->name('vote');
+Route::get('/list-landmarks', [Kuesioner1Controller::class, 'listLandmarks'])->name('list-landmarks');
 
 Route::get('getLink/{id}', [MapController::class, 'getLink']);
 // Route::post('submit', [CommentController::class, 'submit'])->name('submit');
@@ -48,4 +49,3 @@ Route::middleware([
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/submit1', [Kuesioner1Controller::class, 'submit'])->name('submit1');
 Route::post('/submit2', [Kuesioner34Controller::class, 'submit'])->name('submit2');
-
