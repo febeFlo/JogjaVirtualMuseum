@@ -35,60 +35,154 @@
                 <div class="mt-3 overflow-auto ps-3" style="height: 75vh;">
                     <h2 class="font-bold">Rating soundscape</h2>
                     <p>Soundscape di lokasi menyenangkan:</p>
-                    <input type="radio" name="answer[0]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[0]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[0]" value="netral"> netral<br>
-                    <input type="radio" name="answer[0]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[0]" value="sangat setuju"> sangat setuju<br>
+                    <div>
+                        <input type="radio" id="sangat-tidak-setuju-0" name="answer[0]" value="sangat tidak setuju">
+                        <label for="sangat-tidak-setuju-0" class="cursor-pointer">sangat tidak setuju</label><br>
+
+                        <input type="radio" id="tidak-setuju-0" name="answer[0]" value="tidak setuju">
+                        <label for="tidak-setuju-0" class="cursor-pointer">tidak setuju</label><br>
+
+                        <input type="radio" id="netral-0" name="answer[0]" value="netral">
+                        <label for="netral-0" class="cursor-pointer">netral</label><br>
+
+                        <input type="radio" id="setuju-0" name="answer[0]" value="setuju">
+                        <label for="setuju-0" class="cursor-pointer">setuju</label><br>
+
+                        <input type="radio" id="sangat-setuju-0" name="answer[0]" value="sangat setuju">
+                        <label for="sangat-setuju-0" class="cursor-pointer">sangat setuju</label><br>
+                    </div>
 
                     <p>Soundscape di lokasi ribut/semrawut:</p>
-                    <input type="radio" name="answer[1]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[1]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[1]" value="netral"> netral<br>
-                    <input type="radio" name="answer[1]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[1]" value="sangat setuju"> sangat setuju<br>
+                    <div>
+                        <input type="radio" id="sangat-tidak-setuju-1" name="answer[1]" value="sangat tidak setuju">
+                        <label for="sangat-tidak-setuju-1" class="cursor-pointer">sangat tidak setuju</label><br>
+
+                        <input type="radio" id="tidak-setuju-1" name="answer[1]" value="tidak setuju">
+                        <label for="tidak-setuju-1" class="cursor-pointer">tidak setuju</label><br>
+
+                        <input type="radio" id="netral-1" name="answer[1]" value="netral">
+                        <label for="netral-1" class="cursor-pointer">netral</label><br>
+
+                        <input type="radio" id="setuju-1" name="answer[1]" value="setuju">
+                        <label for="setuju-1" class="cursor-pointer">setuju</label><br>
+
+                        <input type="radio" id="sangat-setuju-1" name="answer[1]" value="sangat setuju">
+                        <label for="sangat-setuju-1" class="cursor-pointer">sangat setuju</label><br>
+                    </div>
 
                     <p>Soundscape di lokasi bersemangat:</p>
-                    <input type="radio" name="answer[2]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[2]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[2]" value="netral"> netral<br>
-                    <input type="radio" name="answer[2]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[2]" value="sangat setuju"> sangat setuju<br>
+                    <div>
+                        <input type="radio" id="sangat-tidak-setuju-2" name="answer[2]" value="sangat tidak setuju">
+                        <label for="sangat-tidak-setuju-2" class="cursor-pointer">sangat tidak setuju</label><br>
+
+                        <input type="radio" id="tidak-setuju-2" name="answer[2]" value="tidak setuju">
+                        <label for="tidak-setuju-2" class="cursor-pointer">tidak setuju</label><br>
+
+                        <input type="radio" id="netral-2" name="answer[2]" value="netral">
+                        <label for="netral-2" class="cursor-pointer">netral</label><br>
+
+                        <input type="radio" id="setuju-2" name="answer[2]" value="setuju">
+                        <label for="setuju-2" class="cursor-pointer">setuju</label><br>
+
+                        <input type="radio" id="sangat-setuju-2" name="answer[2]" value="sangat setuju">
+                        <label for="sangat-setuju-2" class="cursor-pointer">sangat setuju</label><br>
+                    </div>
+
 
                     <p>Soundscape di lokasi sepi:</p>
-                    <input type="radio" name="answer[3]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[3]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[3]" value="netral"> netral<br>
-                    <input type="radio" name="answer[3]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[3]" value="sangat setuju"> sangat setuju<br>
+                    <div>
+                        <input type="radio" id="sangat-tidak-setuju-3" name="answer[3]" value="sangat tidak setuju">
+                        <label for="sangat-tidak-setuju-3" class="cursor-pointer">sangat tidak setuju</label><br>
+
+                        <input type="radio" id="tidak-setuju-3" name="answer[3]" value="tidak setuju">
+                        <label for="tidak-setuju-3" class="cursor-pointer">tidak setuju</label><br>
+
+                        <input type="radio" id="netral-3" name="answer[3]" value="netral">
+                        <label for="netral-3" class="cursor-pointer">netral</label><br>
+
+                        <input type="radio" id="setuju-3" name="answer[3]" value="setuju">
+                        <label for="setuju-3" class="cursor-pointer">setuju</label><br>
+
+                        <input type="radio" id="sangat-setuju-3" name="answer[3]" value="sangat setuju">
+                        <label for="sangat-setuju-3" class="cursor-pointer">sangat setuju</label><br>
+                    </div>
+
 
                     <p>Soundscape di lokasi tenang:</p>
-                    <input type="radio" name="answer[4]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[4]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[4]" value="netral"> netral<br>
-                    <input type="radio" name="answer[4]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[4]" value="sangat setuju"> sangat setuju<br>
+                    <div>
+                        <input type="radio" id="sangat-tidak-setuju-4" name="answer[4]" value="sangat tidak setuju">
+                        <label for="sangat-tidak-setuju-4" class="cursor-pointer">sangat tidak setuju</label><br>
+
+                        <input type="radio" id="tidak-setuju-4" name="answer[4]" value="tidak setuju">
+                        <label for="tidak-setuju-4" class="cursor-pointer">tidak setuju</label><br>
+
+                        <input type="radio" id="netral-4" name="answer[4]" value="netral">
+                        <label for="netral-4" class="cursor-pointer">netral</label><br>
+
+                        <input type="radio" id="setuju-4" name="answer[4]" value="setuju">
+                        <label for="setuju-4" class="cursor-pointer">setuju</label><br>
+
+                        <input type="radio" id="sangat-setuju-4" name="answer[4]" value="sangat setuju">
+                        <label for="sangat-setuju-4" class="cursor-pointer">sangat setuju</label><br>
+                    </div>
+
 
                     <p>Soundscape di lokasi mengganggu:</p>
-                    <input type="radio" name="answer[5]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[5]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[5]" value="netral"> netral<br>
-                    <input type="radio" name="answer[5]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[5]" value="sangat setuju"> sangat setuju<br>
+                    <div>
+                        <input type="radio" id="sangat-tidak-setuju-5" name="answer[5]" value="sangat tidak setuju">
+                        <label for="sangat-tidak-setuju-5" class="cursor-pointer">sangat tidak setuju</label><br>
+
+                        <input type="radio" id="tidak-setuju-5" name="answer[5]" value="tidak setuju">
+                        <label for="tidak-setuju-5" class="cursor-pointer">tidak setuju</label><br>
+
+                        <input type="radio" id="netral-5" name="answer[5]" value="netral">
+                        <label for="netral-5" class="cursor-pointer">netral</label><br>
+
+                        <input type="radio" id="setuju-5" name="answer[5]" value="setuju">
+                        <label for="setuju-5" class="cursor-pointer">setuju</label><br>
+
+                        <input type="radio" id="sangat-setuju-5" name="answer[5]" value="sangat setuju">
+                        <label for="sangat-setuju-5" class="cursor-pointer">sangat setuju</label><br>
+                    </div>
+
 
                     <p>Soundscape di lokasi ramai:</p>
-                    <input type="radio" name="answer[6]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[6]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[6]" value="netral"> netral<br>
-                    <input type="radio" name="answer[6]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[6]" value="sangat setuju"> sangat setuju<br>
+                    <div>
+                        <input type="radio" id="sangat-tidak-setuju-6" name="answer[6]" value="sangat tidak setuju">
+                        <label for="sangat-tidak-setuju-6" class="cursor-pointer">sangat tidak setuju</label><br>
+
+                        <input type="radio" id="tidak-setuju-6" name="answer[6]" value="tidak setuju">
+                        <label for="tidak-setuju-6" class="cursor-pointer">tidak setuju</label><br>
+
+                        <input type="radio" id="netral-6" name="answer[6]" value="netral">
+                        <label for="netral-6" class="cursor-pointer">netral</label><br>
+
+                        <input type="radio" id="setuju-6" name="answer[6]" value="setuju">
+                        <label for="setuju-6" class="cursor-pointer">setuju</label><br>
+
+                        <input type="radio" id="sangat-setuju-6" name="answer[6]" value="sangat setuju">
+                        <label for="sangat-setuju-6" class="cursor-pointer">sangat setuju</label><br>
+                    </div>
+
 
                     <p>Soundscape di lokasi membosankan:</p>
-                    <input type="radio" name="answer[7]" value="sangat tidak setuju"> sangat tidak setuju<br>
-                    <input type="radio" name="answer[7]" value="tidak setuju"> tidak setuju<br>
-                    <input type="radio" name="answer[7]" value="netral"> netral<br>
-                    <input type="radio" name="answer[7]" value="setuju"> setuju<br>
-                    <input type="radio" name="answer[7]" value="sangat setuju"> sangat setuju<br>
+                    <div>
+                        <input type="radio" id="sangat-tidak-setuju-7" name="answer[7]" value="sangat tidak setuju">
+                        <label for="sangat-tidak-setuju-7" class="cursor-pointer">sangat tidak setuju</label><br>
+
+                        <input type="radio" id="tidak-setuju-7" name="answer[7]" value="tidak setuju">
+                        <label for="tidak-setuju-7" class="cursor-pointer">tidak setuju</label><br>
+
+                        <input type="radio" id="netral-7" name="answer[7]" value="netral">
+                        <label for="netral-7" class="cursor-pointer">netral</label><br>
+
+                        <input type="radio" id="setuju-7" name="answer[7]" value="setuju">
+                        <label for="setuju-7" class="cursor-pointer">setuju</label><br>
+
+                        <input type="radio" id="sangat-setuju-7" name="answer[7]" value="sangat setuju">
+                        <label for="sangat-setuju-7" class="cursor-pointer">sangat setuju</label><br>
+                    </div>
+
 
                     <p class="pt-5 font-bold">Narasi singkat soundscape ideal</p>
                     <textarea id="text" name="text" rows="4"
