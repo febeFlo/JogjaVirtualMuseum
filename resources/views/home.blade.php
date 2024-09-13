@@ -42,12 +42,12 @@
                         class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-yellow-100">
                         <li>
                             @if ($qmethod)
-                                <a href="{{ $qmethod }}"
+                                <a href="{{ $qmethod }}" target="_blank"
                                     class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">
                                     Q Method Survey
                                 </a>
                             @endif
-                            <a href="https://forms.gle/nfeJJs9aKC2Hm2oG6"
+                            <a href="https://forms.gle/nfeJJs9aKC2Hm2oG6" target="_blank"
                                 class="px-4 py-2 font-bold text-white bg-orange-500 rounded centered-button hover:bg-orange-400">Website
                                 Survey</a>
                             <a href="vote"
@@ -65,21 +65,22 @@
 
         @foreach ($data as $value)
             @php
+            // Top = X dan Left = Y
                 $coordinates = [
                     '1' => ['x' => '30%', 'y' => '51.5%'],
-                    '2' => ['x' => '21.5%', 'y' => '33%'],
+                    '2' => ['x' => '21%', 'y' => '35.7%'],
                     '3' => ['x' => '30%', 'y' => '31.5%'],
                     '4' => ['x' => '45.5%', 'y' => '32.5%'],
-                    '5' => ['x' => '22%', 'y' => '33%'],
+                    '5' => ['x' => '21.5%', 'y' => '36.5%'],
                     '6' => ['x' => '27.8%', 'y' => '48%'],
-                    '7' => ['x' => '22.5%', 'y' => '40.5%'],
-                    '8' => ['x' => '22%', 'y' => '42.5%'],
+                    '7' => ['x' => '23%', 'y' => '41.5%'],
+                    '8' => ['x' => '22.5%', 'y' => '42.5%'],
                     '9' => ['x' => '32%', 'y' => '57.5%'],
-                    '10' => ['x' => '22%', 'y' => '46%'],
+                    '10' => ['x' => '21.5%', 'y' => '48.5%'],
                     '11' => ['x' => '29.2%', 'y' => '39.5%'],
                     '12' => ['x' => '47.5%', 'y' => '31.2%'],
                     '13' => ['x' => '53.3%', 'y' => '28.3%'],
-                    '14' => ['x' => '12.5%', 'y' => '48.5%'],
+                    '14' => ['x' => '12%', 'y' => '51%'],
                     '15' => ['x' => '1.2%', 'y' => '53%'],
                     '16' => ['x' => '47.5%', 'y' => '79.5%'],
                     '17' => ['x' => '81.8%', 'y' => '87.5%'],
@@ -104,7 +105,7 @@
                     '36' => ['x' => '42.4%', 'y' => '32.5%'],
                     '37' => ['x' => '42.4%', 'y' => '34.5%'],
                     '38' => ['x' => '57%', 'y' => '23.5%'],
-                    '39' => ['x' => '19%', 'y' => '35%'],
+                    '39' => ['x' => '20%', 'y' => '33%'],
                     '40' => ['x' => '45%', 'y' => '28%'],
                     '41' => ['x' => '50%', 'y' => '84.2%'],
                     '42' => ['x' => '50.5%', 'y' => '86.2%'],
