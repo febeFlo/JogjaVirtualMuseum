@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserlinkadminResource\Pages;
 use App\Filament\Resources\UserlinkadminResource\RelationManagers;
+use App\Models\User;
 use App\Models\Userlinkadmin;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -38,6 +39,14 @@ class UserlinkadminResource extends Resource
                 Forms\Components\Select::make('user_id')
                     ->relationship('user', 'email')
                     ->label('Email')
+                    ->options(function () {
+                        return User::all()->mapWithKeys(function ($user) {
+                            // Customize the format of the display value here
+                            return [
+                                $user->id => $user->id . ' ' . $user->email
+                            ];
+                        });
+                    })
                     ->required(),
                 Forms\Components\Toggle::make('isAdmin')
                     ->required(),
