@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <a href="home"
+        class="absolute px-4 py-2 font-bold text-white bg-gray-500 rounded top-4 left-4 hover:bg-gray-600">
+        Back
+    </a>
     <div class="flex items-center justify-center h-screen">
         <div class="max-w-sm p-6 bg-white rounded-lg shadow-md">
             <h2 class="pt-8 text-xl font-bold text-center">Pilih 5 spot yang paling mewakili soundscape Kota Yogyakarta
