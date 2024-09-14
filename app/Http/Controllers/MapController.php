@@ -22,7 +22,10 @@ class MapController extends Controller
             return redirect('/'); // Mengarahkan ke halaman '/'
         }
 
-        $linkqmethod = User::where('id', $id)->first()->userLinkAdmin->link;
+        $linkqmethod = User::where('id', $id)
+            ->first()
+            ->userLinkAdmin
+            ->link ?? null;
 
         return view('home', [
             'data' => Map::all(),
