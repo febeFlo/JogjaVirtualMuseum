@@ -34,7 +34,7 @@ class VotesBarChart extends ChartWidget
         }
 
         arsort($raw);
-        $top5 = array_slice($raw, 0, 5, true);
+        $top5 = array_slice($raw, 0, 10, true);
 
         $keys = array_keys($top5);
         $data = array_values($top5);
@@ -55,18 +55,29 @@ class VotesBarChart extends ChartWidget
                     'label' => 'Top voted pinpoin',
                     'data' => $data,
                     'borderColor' => [
-                        'rgb(54, 162, 235)',
+                        'rgb(54, 162, 235)', // Existing colors
                         'rgb(255, 159, 64)',
                         'rgb(75, 192, 192)',
                         'rgb(153, 102, 255)',
-                        'rgb(255, 99, 132)'
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 206, 86)', // New colors
+                        'rgb(75, 192, 192)',
+                        'rgb(201, 203, 207)',
+                        'rgb(255, 159, 64)',
+                        'rgb(54, 162, 235)',
                     ],
+
                     'backgroundColor' => [
-                        'rgb(54, 162, 235)',
+                        'rgb(54, 162, 235)', // Existing colors
                         'rgb(255, 159, 64)',
                         'rgb(75, 192, 192)',
                         'rgb(153, 102, 255)',
-                        'rgb(255, 99, 132)'
+                        'rgb(255, 99, 132)',
+                        'rgba(255, 206, 86, 0.2)', // New colors
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(201, 203, 207, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
                     ],
                 ],
             ],
