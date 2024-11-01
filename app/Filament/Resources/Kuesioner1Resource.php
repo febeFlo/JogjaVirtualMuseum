@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Exports\Votes1Export;
 use App\Exports\VotesExport;
 use App\Filament\Resources\Kuesioner1Resource\Pages;
 use App\Models\Kuesioner1;
@@ -113,14 +114,14 @@ class Kuesioner1Resource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ])
-            // ->headerActions([
-            //     Action::make('export')
-            //         ->label('Export to Excel')
-            //         ->icon('heroicon-o-arrow-down-tray')
-            //         ->action(function () {
-            //             return Excel::download(new VotesExport, 'maps.xlsx');
-            //         }),
-            // ])
+            ->headerActions([
+                Action::make('export')
+                    ->label('Export to Excel')
+                    ->icon('heroicon-o-arrow-down-tray')
+                    ->action(function () {
+                        return Excel::download(new Votes1Export, 'vote.xlsx');
+                    }),
+            ])
         ;
     }
 
