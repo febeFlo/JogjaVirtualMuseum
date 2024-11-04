@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+@font-face {
+    font-family: 'DMSans';
+    src: url('/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 700;
+    /* Define the variable weight range */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DMSans';
+    src: url('/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 700;
+    /* Define the variable weight range */
+    font-style: italic;
+}
