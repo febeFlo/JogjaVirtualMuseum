@@ -76,7 +76,7 @@
         var map = L.map('map', {
             crs: L.CRS.Simple,
             minZoom: -3.3,
-            maxZoom: -1.5
+            maxZoom: -1.8
         });
 
         var bounds = [
