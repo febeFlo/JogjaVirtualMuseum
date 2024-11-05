@@ -42,14 +42,14 @@
             <nav class="p-[10px] bg-orange-500 backdrop-blur-sm border-gray-200 md:h-screen relative">
                 <img src="{{ asset('assets/PatternJogja.svg') }}" class="absolute z-1 bottom-[-30%] rotate-[135deg] right-[-125%] hidden md:inline" style="min-width:800px;"/>
                 <div class="flex flex-col items-center w-full h-full">
-                    <div class="flex p-10 justify-center">
+                    <div class="flex justify-center p-10">
                         <a href="home" class="flex items-center space-x-3 rtl:space-x-reverse">
-                            <span class="self-center font-sans text-center text-2xl text-white font-bold ">Jogja Virtual
+                            <span class="self-center font-sans text-2xl font-bold text-center text-white ">Jogja Virtual
                                 Soundscape
                             </span>
                         </a>
                         <button data-collapse-toggle="navbar-default" type="button"
-                            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 ml-5 rounded-lg md:hidden hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                            class="inline-flex items-center justify-center w-10 h-10 p-2 ml-5 text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-gray-200"
                             aria-controls="navbar-default" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -59,32 +59,32 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="hidden w-full h-full flex justify-between md:block relative z-4" id="navbar-default">
+                    <div class="relative flex justify-between hidden w-full h-full md:block z-4" id="navbar-default">
                         <ul
-                            class="flex flex-col w-full h-full items-center p-4 mt-4 font-medium border md:p-0 md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
-                            <li class="flex flex-col w-full h-full justify-between">
+                            class="flex flex-col items-center w-full h-full p-4 mt-4 font-medium border md:p-0 md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
+                            <li class="flex flex-col justify-between w-full h-full">
                                 <div class="flex flex-col md:basis-[25%] md:mt-5 justify-between">
                                     <a href="list-landmarks"
-                                        class="px-4 py-2 my-2 flex justify-start transition duration-200 md:mx-2 font-bold bg-white text-orange-500  rounded-xl centered-button hover:bg-amber-400 hover:text-white w-full md:w-auto">
+                                        class="flex justify-start w-full px-4 py-2 my-2 font-bold text-orange-500 transition duration-200 bg-white md:mx-2 rounded-xl centered-button hover:bg-amber-400 hover:text-white md:w-auto">
                                         Iconic Locations
                                     </a>
                                     <a href="vote"
-                                        class="px-4 py-2 my-2 flex justify-start transition duration-200 md:mx-2 font-bold bg-white text-orange-500  rounded-xl centered-button hover:bg-amber-400 hover:text-white w-full md:w-auto">
+                                        class="flex justify-start w-full px-4 py-2 my-2 font-bold text-orange-500 transition duration-200 bg-white md:mx-2 rounded-xl centered-button hover:bg-amber-400 hover:text-white md:w-auto">
                                         Vote
                                     </a>
                                     @if ($qmethod)
                                         <a href="{{ $qmethod }}" target="_blank"
-                                            class="px-4 py-2 my-2 transition duration-200 md:mx-2 font-bold bg-white text-orange-500 rounded-xl centered-button hover:bg-amber-400 hover:text-white w-full md:w-auto">
+                                            class="w-full px-4 py-2 my-2 font-bold text-orange-500 transition duration-200 bg-white md:mx-2 rounded-xl centered-button hover:bg-amber-400 hover:text-white md:w-auto">
                                             Q Method Survey
                                         </a>
                                     @endif
                                     <a href="https://forms.gle/nfeJJs9aKC2Hm2oG6" target="_blank"
-                                        class="px-4 py-2 my-2 flex justify-start transition duration-200 md:mx-2 font-bold bg-white text-orange-500 rounded-xl centered-button hover:bg-amber-400 hover:text-white w-full md:w-auto">Website
+                                        class="flex justify-start w-full px-4 py-2 my-2 font-bold text-orange-500 transition duration-200 bg-white md:mx-2 rounded-xl centered-button hover:bg-amber-400 hover:text-white md:w-auto">Website
                                         Survey
                                     </a>
                                 </div>
                                 <a href="logout"
-                                    class="group px-4 py-2 my-2 transition duration-200 flex justify-start font-bold text-white bg-red-500 rounded-xl hover:text-red-500 hover:bg-white centered-button w-full md:w-auto">
+                                    class="flex justify-start w-full px-4 py-2 my-2 font-bold text-white transition duration-200 bg-red-500 group rounded-xl hover:text-red-500 hover:bg-white centered-button md:w-auto">
                                     <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="mr-2 transition-colors group-hover:stroke-red-500">
                                         <path d="M17 16L21 12M21 12L17 8M21 12L7 12M13 16V17C13 18.6569 11.6569 20 10 20H6C4.34315 20 3 18.6569 3 17V7C3 5.34315 4.34315 4 6 4H10C11.6569 4 13 5.34315 13 7V8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                                     </svg>
@@ -104,7 +104,7 @@
                 var map = L.map('map', {
                     crs: L.CRS.Simple,
                     minZoom: -3.5,
-                    maxZoom: 2
+                    maxZoom: -1.5
                 });
 
                 var bounds = [[0,0], [21054,17177]];
