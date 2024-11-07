@@ -228,6 +228,101 @@
                 });
             </script>
         </div>
+        @php
+    $currentIndex = 0;
+    $places = [
+        ["name" => "Tugu Jogja", "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "asset"=>"assets/jogjaView.png"],
+        ["name" => "Jalan Malioboro", "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "asset"=>"assets/malioboro.png"],
+        ["name" => "Hamzah Batik", "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "asset"=>"assets/HamzahBatik.jpg"],
+        ["name" => "Gembira Loka Zoo", "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "asset"=>"assets/Gembira-Loka-Zoo.jpg"],
+        ["name" => "Stasiun Tugu", "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "asset"=>"assets/stasiunTugu.png"],
+        ["name" => "Kridsono", "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "asset"=>"assets/jogjaView.jpg"]
+
+    ];
+@endphp
+
+<div class="flex flex-col mb-10 w-full items-center">
+    <div class="flex w-full justify-center h-[350px]">
+        <img src="{{ $places[0]['asset'] }}" id="detailImage" class="w-[350px] h-[400px] object-cover flex rounded-xl"/>
+        <div class="flex flex-col pl-[4%]">
+            <div class="flex flex-col">
+            <p class="text-xl font-bold pl-5">Here's the information of</p>
+            <div class="flex items-center">
+                <p class="text-xl font-bold pl-5">the area you clicked.</p>
+                <div class="border-t-4 border-orange-500 my-2 ml-5 w-[45%]"></div>
+            </div>
+            </div>
+            <div class="flex py-5">
+                <img src="assets/locationPointer.png" class="w-[67px] h-[67px]"/>
+                <p id="placeName" class="text-5xl text-red-600 font-bold md:ml-5">{{ $places[0]["name"] }}</p>
+            </div>
+            <p id="placeDescription" class="max-w-[35vw] ml-5">{{ $places[0]["description"] }}</p>
+        </div>
+    </div>
+
+    <div id="placesList" class="overflow-x-auto flex space-x-10 px-5 mt-10 ml-[25vw] pt-10 w-[90vw] pr-[10vw] w-full h-full"> 
+        @foreach($places as $index => $place) @if ($index != $currentIndex) 
+        <div onclick="displayPlaceDetail({{ $index }})" class="cursor-pointer p-5 transition duration-200 border border-gray-300 rounded-xl shadow-lg w-[300px] bg-gray-300 hover:bg-gray-100"> 
+            <p class="text-center text-2xl font-bold">{{ $place['name'] }}</p> 
+            <div class="border-t-4 border-orange-500 my-2 mx-10"></div>
+            <img src="{{ $place['asset'] }}" alt="{{ $place['name'] }}" class="w-full h-[200px] object-cover rounded-xl"/> 
+            <p class="text-xl mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+        </div>
+         @endif @endforeach 
+    </div>
+</div>
+
+<script>
+    const places = @json($places);
+    let currentIndex = {{ $currentIndex }};
+
+    function displayPlaceDetail(index) {
+        currentIndex = index;
+        document.getElementById("placeName").innerText = places[index].name;
+        document.getElementById("placeDescription").innerText = places[index].description;
+        document.getElementById("detailImage").src = places[index].asset;
+        renderPlaceCards();
+    }
+
+    function renderPlaceCards() {
+        const placesList = document.getElementById('placesList');
+        placesList.innerHTML = '';
+
+        places.forEach((place, idx) => {
+            if (idx !== currentIndex) {
+                const card = document.createElement('div');
+                card.className = 'cursor-pointer p-5 border border-gray-300 transition duration-200 rounded-xl shadow-lg w-[300px] flex-shrink-0 bg-gray-300 hover:bg-gray-100';
+                card.onclick = () => displayPlaceDetail(idx);
+
+                const name = document.createElement('p');
+                name.className = 'text-center text-2xl font-bold';
+                name.innerText = place.name;
+
+                const divider = document.createElement('div');
+                divider.className = 'border-t-4 border-orange-500 my-2 mx-10'; 
+
+                const img = document.createElement('img'); 
+                img.src = place.asset;
+                img.className = 'w-full h-[200px] object-cover rounded-xl';
+
+                const desc = document.createElement('p');
+                desc.className = 'text-xl mt-5';
+                desc.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+                
+
+                card.appendChild(name);
+                card.appendChild(divider);
+                card.appendChild(img);
+                card.appendChild(desc);
+                placesList.appendChild(card);
+            }
+        });
+    }
+
+
+    renderPlaceCards();
+</script>
         </div>
 </body>
 
