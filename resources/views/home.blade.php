@@ -54,9 +54,9 @@
                     <div class="flex flex-col items-center w-full h-full">
                         <div class="flex p-5 pb-10 justify-between md:w-full bg-gradient-to-b from-orange-500 via-orange-500 to-white  px-[10%]">
                             <a href="home" class="flex items-center w-full space-x-3 rtl:space-x-reverse">
-                                <span class="self-center w-full font-sans text-3xl font-bold text-white ">TilikJogja.id
+                                <span class="self-center w-full font-sans text-3xl font-bold text-white ">Jogja Virtual Soundscape Museum
                                 </span>
-                                <div class="w-[100px] h-[50px] bg-white"></div>
+                                {{-- <div class="w-[100px] h-[50px] bg-white"></div> --}}
                             </a>
                             <button data-collapse-toggle="navbar-default" type="button"
                                 class="inline-flex items-center justify-center w-10 h-10 p-2 ml-5 text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-gray-200"
