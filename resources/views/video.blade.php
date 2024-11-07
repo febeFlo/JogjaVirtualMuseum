@@ -14,7 +14,7 @@
         <div class="flex items-center">
             <a href="{{ route('home') }}"><img src="{{ asset('assets/back.png') }}" class="w-[20px] mt-3 ml-4"></a>
         </div>
-        <div class="absolute top-0 left-0 p-2 ml-6 mt-7 size-3/12">
+        <div class="absolute top-0 left-0 p-2 ml-6 mt-7 size-3/12 ">
             {{-- <div class="scroll-smooth">
                 <ul>
                     @foreach ($comments as $value)
@@ -26,13 +26,13 @@
                 </ul>
             </div> --}}
 
-
-            <p class="justify-center text-xl font-bold">{{ $data['name'] }}</p>
-            <p class="justify-center">{{ $data['titikUkur'] }}</p>
+            
+            <p class="justify-center text-xl text-center font-bold mr-10">{{ $data['name'] }}</p>
+            <p class="justify-center text-center mr-10">{{ $data['titikUkur'] }}</p>
 
             <form action="{{ route('submit2') }}" method="POST">
                 @csrf
-                <div class="mt-3 overflow-auto ps-3" style="height: 75vh;">
+                <div class="mt-3 overflow-auto ps-3" style="height: 70vh;">
                     <h2 class="font-bold">Rating soundscape</h2>
                     <p>Soundscape di lokasi menyenangkan:</p>
                     <div>
@@ -193,7 +193,7 @@
                     <input type="hidden" id="user_id" name="user_id" value="{{ Auth::user()->id }}">
                 </div>
                 <button type="submit"
-                    class="inline-flex justify-center items-center py-2.5 px-4 mt-3 font-medium text-center text-white bg-orange-500 rounded-lg focus:ring-4 hover:bg-orange-400">
+                    class="inline-flex justify-center w-[85%]  items-center py-2.5 px-4 mt-3 font-medium text-center text-white bg-orange-500 rounded-lg focus:ring-4 hover:bg-orange-400">
                     Kirim
                 </button>
             </form>
