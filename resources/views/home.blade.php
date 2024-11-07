@@ -120,7 +120,8 @@
                     var map = L.map('map', {
                         crs: L.CRS.Simple,
                         minZoom: -3.8,
-                        maxZoom: 2
+                        maxZoom: 2,
+                        zoom: -3.8
                     });
 
                     var bounds = [[0,0], [21054,17177]];
