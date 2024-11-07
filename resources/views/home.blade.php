@@ -24,7 +24,6 @@
         }
 
 
-
         #map {
             height: 140vh;
             width: 69vw;
