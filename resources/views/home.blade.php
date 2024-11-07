@@ -17,17 +17,17 @@
             display: inline-block;
         }
 
-        
+
 
         #placesList::-webkit-scrollbar {
-            display: none; 
+            display: none;
         }
 
 
 
         #map {
-            height: 208vh;
-            width: 80vw;
+            height: 140vh;
+            width: 69vw;
             border-radius: 30px;
             margin-bottom: 10%;
         }
@@ -48,18 +48,18 @@
 
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-        <div class="flex flex-col justify-center items-center overflow-x-hidden">
-            <div class="relative overflow-hidden w-full">
-                <nav class="backdrop-blur-sm border-gray-200 w-full pb-5 relative">
+        <div class="flex flex-col items-center justify-center overflow-x-hidden">
+            <div class="relative w-full overflow-hidden">
+                <nav class="relative w-full pb-5 border-gray-200 backdrop-blur-sm">
                     <div class="flex flex-col items-center w-full h-full">
                         <div class="flex p-5 pb-10 justify-between md:w-full bg-gradient-to-b from-orange-500 via-orange-500 to-white  px-[10%]">
-                            <a href="home" class="flex items-center w-full  space-x-3 rtl:space-x-reverse">
-                                <span class="self-center font-sans w-full text-3xl text-white font-bold ">TilikJogja.id
+                            <a href="home" class="flex items-center w-full space-x-3 rtl:space-x-reverse">
+                                <span class="self-center w-full font-sans text-3xl font-bold text-white ">TilikJogja.id
                                 </span>
                                 <div class="w-[100px] h-[50px] bg-white"></div>
                             </a>
                             <button data-collapse-toggle="navbar-default" type="button"
-                                class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 ml-5 rounded-lg md:hidden hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                                class="inline-flex items-center justify-center w-10 h-10 p-2 ml-5 text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-gray-200"
                                 aria-controls="navbar-default" aria-expanded="false">
                                 <span class="sr-only">Open main menu</span>
                                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -71,30 +71,30 @@
                         </div>
                         <div class="hidden w-full h-full flex px-[10%] justify-between items-center md:block relative z-4" id="navbar-default">
                             <ul
-                                class="flex flex-col md:flex-row w-full h-full items-center p-4 mt-4 font-medium border md:p-0 md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
-                                <li class="flex flex-col items-center md:flex-row w-full h-full justify-between">
+                                class="flex flex-col items-center w-full h-full p-4 mt-4 font-medium border md:flex-row md:p-0 md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
+                                <li class="flex flex-col items-center justify-between w-full h-full md:flex-row">
                                     <div class="flex flex-col items-center md:flex-row md:basis-[45%] justify-between">
                                         <a href="list-landmarks"
-                                            class="px-4 py-2 my-2 text-xl flex justify-start transition duration-200 md:mx-2 font-bold bg-white text-orange-500  rounded-xl centered-button hover:bg-orange-500 hover:text-white w-full md:w-auto">
+                                            class="flex justify-start w-full px-4 py-2 my-2 text-xl font-bold text-orange-500 transition duration-200 bg-white md:mx-2 rounded-xl centered-button hover:bg-orange-500 hover:text-white md:w-auto">
                                             Iconic Locations
                                         </a>
                                         <a href="vote"
-                                            class="px-4 py-2 my-2 text-xl flex justify-start transition duration-200 md:mx-2 font-bold bg-white text-orange-500  rounded-xl centered-button hover:bg-orange-500 hover:text-white w-full md:w-auto">
+                                            class="flex justify-start w-full px-4 py-2 my-2 text-xl font-bold text-orange-500 transition duration-200 bg-white md:mx-2 rounded-xl centered-button hover:bg-orange-500 hover:text-white md:w-auto">
                                             Vote
                                         </a>
                                         @if ($qmethod)
                                             <a href="{{ $qmethod }}" target="_blank"
-                                                class="px-4 py-2 my-2 text-xl transition duration-200 md:mx-2 font-bold bg-white text-orange-500 rounded-xl centered-button hover:bg-orange-500 hover:text-white w-full md:w-auto">
+                                                class="w-full px-4 py-2 my-2 text-xl font-bold text-orange-500 transition duration-200 bg-white md:mx-2 rounded-xl centered-button hover:bg-orange-500 hover:text-white md:w-auto">
                                                 Q Method Survey
                                             </a>
                                         @endif
                                         <a href="https://forms.gle/nfeJJs9aKC2Hm2oG6" target="_blank"
-                                            class="px-4 py-2 my-2 text-xl flex justify-start transition duration-200 md:mx-2 font-bold bg-white text-orange-500 rounded-xl centered-button hover:bg-orange-500 hover:text-white w-full md:w-auto">Website
+                                            class="flex justify-start w-full px-4 py-2 my-2 text-xl font-bold text-orange-500 transition duration-200 bg-white md:mx-2 rounded-xl centered-button hover:bg-orange-500 hover:text-white md:w-auto">Website
                                             Survey
                                         </a>
                                     </div>
                                     <a href="logout"
-                                        class="group px-4 py-2 my-2 transition duration-200 flex justify-start font-bold text-white bg-red-500 rounded-xl hover:bg-orange-500 centered-button w-full md:w-auto">
+                                        class="flex justify-start w-full px-4 py-2 my-2 font-bold text-white transition duration-200 bg-red-500 group rounded-xl hover:bg-orange-500 centered-button md:w-auto">
                                         <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="mr-2 transition-colors group-hover:stroke-red-500">
                                             <path d="M17 16L21 12M21 12L17 8M21 12L7 12M13 16V17C13 18.6569 11.6569 20 10 20H6C4.34315 20 3 18.6569 3 17V7C3 5.34315 4.34315 4 6 4H10C11.6569 4 13 5.34315 13 7V8" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                                         </svg>
@@ -108,8 +108,8 @@
                 </nav>
             </div>
             <!-- <div class="bg-zinc-700 w-[90%] my-10 p-10 rounded-[50px] relative overflow-hidden">
-                <p class="text-3xl md:text-7xl text-white font-bold pb-5">Welcome, Traveller</p>
-                <p class="text-lg md:text-2xl text-white">Let's take a stroll around Jogjakarta.<br class="hidden md:inline"/>Where are we going today? You choose!</p>
+                <p class="pb-5 text-3xl font-bold text-white md:text-7xl">Welcome, Traveller</p>
+                <p class="text-lg text-white md:text-2xl">Let's take a stroll around Jogjakarta.<br class="hidden md:inline"/>Where are we going today? You choose!</p>
                 <div class="rounded-[50%] border-orange-500/50 w-[250px] h-[250px] absolute border-[20px] right-[-34%] md:right-[-10%] top-20"></div>
                 <div class="rounded-[50%] border-slate-100/30 w-[250px] h-[250px] absolute border-[20px] right-[-25%] md:right-[-1%] bottom-[-50%]"></div>
             </div> -->
@@ -258,33 +258,33 @@
 @endphp
 
 <div class="flex flex-col mb-[10vh] w-full justify-center items-center">
-    <div class="flex flex-col md:flex-row w-full justify-center items-center">
+    <div class="flex flex-col items-center justify-center w-full md:flex-row">
         <img src="{{ $places[0]['asset'] }}" id="detailImage" class="w-[300px] h-[350px] md:w-[350px] md:h-[400px] object-cover flex rounded-xl"/>
         <div class="flex flex-col md:pl-[4%]">
             <div class="flex flex-col mt-5 md:mt-0">
-            <p class="text-base md:text-xl font-bold md:pl-5">Here's the information of</p>
+            <p class="text-base font-bold md:text-xl md:pl-5">Here's the information of</p>
             <div class="flex items-center">
-                <p class="text-base md:text-xl font-bold md:pl-5">the area you clicked.</p>
+                <p class="text-base font-bold md:text-xl md:pl-5">the area you clicked.</p>
                 <div class="border-t-4 border-orange-500 w-[35%] my-2 ml-5 md:w-[45%]"></div>
             </div>
             </div>
             <div class="flex items-center py-5">
                 <img src="assets/locationPointer.png" class="w-[67px] h-[67px]"/>
-                <p id="placeName" class="text-3xl md:text-5xl text-red-600 font-bold md:ml-5">{{ $places[0]["name"] }}</p>
+                <p id="placeName" class="text-3xl font-bold text-red-600 md:text-5xl md:ml-5">{{ $places[0]["name"] }}</p>
             </div>
             <p id="placeDescription" class="max-w-[80vw] md:max-w-[35vw] md:ml-5">{{ $places[0]["description"] }}</p>
         </div>
     </div>
 
-    <div id="placesList" class="overflow-x-auto flex space-x-5 md:space-x-10 px-2 mt-[5vh] pl-10 md:pl-[18vw] pt-10 w-[100w] pr-[10vw] w-full h-full"> 
-        @foreach($places as $index => $place) @if ($index != $currentIndex) 
-        <div onclick="displayPlaceDetail({{ $index }})" class="cursor-pointer p-5 transition duration-200 border border-gray-300 rounded-xl shadow-lg w-[300px] bg-gray-300 hover:bg-gray-100"> 
-            <p class="text-center text-2xl font-bold">{{ $place['name'] }}</p> 
-            <div class="border-t-4 border-orange-500 my-2 mx-10"></div>
-            <img src="{{ $place['asset'] }}" alt="{{ $place['name'] }}" class="w-full h-[200px] object-cover rounded-xl"/> 
-            <p class="text-xl mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+    <div id="placesList" class="overflow-x-auto flex space-x-5 md:space-x-10 px-2 mt-[5vh] pl-10 md:pl-[18vw] pt-10 w-[100w] pr-[10vw] w-full h-full">
+        @foreach($places as $index => $place) @if ($index != $currentIndex)
+        <div onclick="displayPlaceDetail({{ $index }})" class="cursor-pointer p-5 transition duration-200 border border-gray-300 rounded-xl shadow-lg w-[300px] bg-gray-300 hover:bg-gray-100">
+            <p class="text-2xl font-bold text-center">{{ $place['name'] }}</p>
+            <div class="mx-10 my-2 border-t-4 border-orange-500"></div>
+            <img src="{{ $place['asset'] }}" alt="{{ $place['name'] }}" class="w-full h-[200px] object-cover rounded-xl"/>
+            <p class="mt-5 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-         @endif @endforeach 
+         @endif @endforeach
     </div>
 </div>
 
@@ -315,9 +315,9 @@
                 name.innerText = place.name;
 
                 const divider = document.createElement('div');
-                divider.className = 'border-t-4 border-orange-500 my-2 mx-10'; 
+                divider.className = 'border-t-4 border-orange-500 my-2 mx-10';
 
-                const img = document.createElement('img'); 
+                const img = document.createElement('img');
                 img.src = place.asset;
                 img.className = 'w-full h-[200px] object-cover rounded-xl';
 
@@ -325,7 +325,7 @@
                 desc.className = 'text-xl mt-5';
                 desc.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-                
+
 
                 card.appendChild(name);
                 card.appendChild(divider);
