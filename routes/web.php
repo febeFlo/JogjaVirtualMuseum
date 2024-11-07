@@ -18,9 +18,10 @@ Route::get('/login', function () {
     return view('auth.register');
 });
 
-Route::get('/video', function () {
-    return view('video');
-})->name('video');
+// Route::get('/video', function () {
+//     return view('video');
+// })->name('video');
+Route::get('/video', [Kuesioner34Controller::class, 'show'])->name('video');
 
 Route::post('/login', [UserController::class, 'login'])->name('login');
 // Route::get('/logout', [UserController::class, 'logout'])->name('logout');

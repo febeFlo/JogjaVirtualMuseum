@@ -11,21 +11,19 @@ use Illuminate\Support\Facades\Auth;
 
 class Kuesioner1Controller extends Controller
 {
-    public function submit(Request $request)
-    {
+    public function submit(Request $request) {
         $request->validate([
             'location' => 'required|array|size:5',
             'location.*' => 'required|string',
             'user_id' => 'required|integer|exists:users,id'
         ]);
 
-
         $kuesioner1 = Kuesioner1::where('user_id', $request->input('user_id'))->first();
 
         if (is_null($kuesioner1)) {
             $kuesioner1 = new Kuesioner1();
+            $kuesioner1->user_id = $request->input('user_id');
         }
-
 
         $kuesioner1->lokasi1 = $request->input('location')[0];
         $kuesioner1->lokasi2 = $request->input('location')[1];
@@ -33,10 +31,9 @@ class Kuesioner1Controller extends Controller
         $kuesioner1->lokasi4 = $request->input('location')[3];
         $kuesioner1->lokasi5 = $request->input('location')[4];
         $kuesioner1->titik_tambahan = $request->input('text');
-        $kuesioner1->user_id = $request->input('user_id');
         $kuesioner1->save();
 
-        return redirect()->route('home')->with('success', 'Registration successful!');
+        return redirect()->route('home')->with('success', 'Vote updated successfully!');
     }
 
     public function show()
@@ -45,7 +42,7 @@ class Kuesioner1Controller extends Controller
         $id = Auth::user()->id;
 
         if (empty($id)) {
-            return redirect('/'); // Mengarahkan ke halaman '/'
+            return redirect('/');
         }
 
         $getSelected = Kuesioner1::where('user_id', $id)->first();
