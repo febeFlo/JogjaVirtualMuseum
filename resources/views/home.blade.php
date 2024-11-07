@@ -59,7 +59,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="relative flex justify-between hidden w-full h-full md:block z-4" id="navbar-default">
+                    <div class="relative flex justify-between w-full h-full md:block z-4" id="navbar-default">
                         <ul
                             class="flex flex-col items-center w-full h-full p-4 mt-4 font-medium border md:p-0 md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
                             <li class="flex flex-col justify-between w-full h-full">
@@ -103,8 +103,9 @@
             <script>
                 var map = L.map('map', {
                     crs: L.CRS.Simple,
-                    minZoom: -3.5,
-                    maxZoom: -1.5
+                    minZoom: -4.6,
+                    maxZoom: -1.5,
+                    zoom: -4.6
                 });
 
                 var bounds = [[0,0], [21054,17177]];
