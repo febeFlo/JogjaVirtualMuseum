@@ -48,7 +48,6 @@
                                             $location['id'] == $getSelected->lokasi4 ||
                                             $location['id'] == $getSelected->lokasi5)) checked @endif />
                             <label for="checkbox-{{ $loop->index }}" class="flex items-center justify-center flex-col p-4 border rounded-lg shadow-sm cursor-pointer h-[180px] transition-all duration-150 hover:bg-gray-100 peer-checked:bg-orange-500 peer-checked:border-orange-500 peer-checked:text-white">
-                                <img src="assets/jogjaView.jpg" class="w-full object-cover rounded-lg"/>
                                 <span class="text-md font-medium text-center mt-2">{{ $location['name'] }}</span>
                             </label>
 

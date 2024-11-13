@@ -200,6 +200,7 @@
 
                 var points = @json($points);
 
+<<<<<<< Updated upstream
                 points.forEach(function(point) {
                     var popupContent = `
                         <div style="display:flex; justify-content:center; item-content:center; align-items:center; flex-direction: column;width:250px;">
@@ -209,6 +210,11 @@
                             <a href="${point.url}"></a>
                         </div>
                     `;
+=======
+                        
+
+                        $points = [];
+>>>>>>> Stashed changes
 
                     var marker = L.marker(point.coordinates, {icon: customIcon})
                         .addTo(map)
