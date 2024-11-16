@@ -160,7 +160,7 @@
 
                 var customIcon = L.icon({
                     iconUrl: "{{ asset('assets/locationPointer.png') }}",
-                    iconSize: [50, 50],
+                    iconSize: [30, 30],
                     iconAnchor: [25, 40],
                     popupAnchor: [-3, -76],
                 });
