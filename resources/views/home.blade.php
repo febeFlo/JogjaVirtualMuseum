@@ -45,6 +45,7 @@
 
         /* Untuk layar maksimum lebar 1080px (biasanya untuk tablet atau laptop kecil) */
         @media (max-width: 1920px) {
+
             /* Styles khusus untuk layar dengan lebar hingga 1080px */
             #map {
                 height: 80vh;
@@ -54,6 +55,7 @@
 
         /* Untuk layar maksimum lebar 1366px (biasanya untuk laptop) */
         @media (max-width: 1366px) {
+
             /* Styles khusus untuk layar dengan lebar hingga 1366px */
             #map {
                 height: 85vh;
@@ -161,8 +163,8 @@
                 var customIcon = L.icon({
                     iconUrl: "{{ asset('assets/locationPointer.png') }}",
                     iconSize: [30, 30],
-                    iconAnchor: [25, 40],
-                    popupAnchor: [-3, -76],
+                    iconAnchor: [15, 30], // Half the width, full height
+                    popupAnchor: [0, -20], // Adjusted for a smaller icon
                 });
 
                 // var points = [];
